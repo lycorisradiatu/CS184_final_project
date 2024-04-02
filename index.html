@@ -20,111 +20,35 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
 </head>
 
-
-<body>
-
-<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2017</h1>
-<h1 align="middle">Project 4: Cloth Simulator</h1>
-<h2 align="middle">YOUR NAME, CS184-??</h2>
-
-<br><br>
-
-<div>
-
-<h2 align="middle">Overview</h2>
-<p>Give a high-level overview of what you implemented in this project. Think about what you've built as a whole. Share your thoughts on what interesting things you've learned from completing the project.</p>
-
-<h2 align="middle">Part I: Masses and springs</h2>
-
-<h3>
-  The images below show what the wireframe looks like (1) without any shearing constraints, (2) with only shearing constraints, and (3) with all constraints.
-</h3>
-<div align="middle">
-  <table style="width:100%">
-    <tr align="center">
-      <td>
-        <img src="images/task1-1.jpg" align="middle" width="400px"/>
-        <figcaption>without any shearing constraints</figcaption>
-      </td>
-      <td>
-        <img src="images/task1-2.jpg" align="middle" width="400px"/>
-        <figcaption>with only shearing constraints</figcaption>
-      </td>
-      <td>
-        <img src="images/task1-3.jpg" align="middle" width="400px"/>
-        <figcaption>with all constraints</figcaption>
-      </td>
-    </tr>
-  </table>
-</div>
-<br>
-
-<h2 align="middle">Part II: Simulation via numerical integration</h2>
-<h3>
-  Experiment with some the parameters in the simulation. 
-</h3>
+<h2>
+    Schedule
+</h2>
 <p>
-  For spring constant ks, the cloth takes shorter time to rest and looks stiff with high ks while with low ks, the cloth takes longer time to
-  rest and looks softer.
+    • 4/2 Proposal due<br>
+    • 4/3-4/7Literature Review<br>
+    • 4/8-4/12 Implements local remeshing operators and incremental remeshing<br>
+    • 4/13-4/14 Add adaptive remeshing and feature preservation<br>
+    • 4/15 Milestone deliverable<br>
+    • 4/16 Graded Milestone Due”<br>
+    • 4/17-4/23 Variational remeshing<br>
+    • 4/24-27 adaptive remeshing support for Variational remeshing<br>
+    • 4/28-29 final deliverables<br>
+    • 4/30 Final Deliverables (Report & Video) Due<br>
 </p>
-<table style="width:100%">
-  <tr align="center">
-    <td>
-      <img src="images/task2-1.jpg" align="middle" width="400px"/>
-      <figcaption>low ks at t = 40</figcaption>
-    </td>
-    <td>
-      <img src="images/task2-2.jpg" align="middle" width="400px"/>
-      <figcaption>high ks at t = 40</figcaption>
-    </td>
-  </tr>
-</table>
 
+<h2>
+    Resources
+</h2>
 <p>
-  For density, the cloth takes shorter time to rest and looks stiff with low density, while with high density, the cloth takes longer time to
-  rest and looks softer.
+    • Textbook: Chapter 6<br>
+• Alliez et al, “Interactive geometry remeshing”, SIGGRAPH 2002<br>
+• Alliez et al, “Isotropic surface remeshing”, SMI 2003<br>
+• Alliez et al, “Anisotropic polygonal remeshing”, SIGGRAPH 2003<br>
+• Vorsatz et al, “Dynamic remeshing and applications”, Solid Modeling 2003<br>
+• Botsch & Kobbelt, “A remeshing approach to multiresolution modeling”,
+Symp. on Geometry Processing 2004<br>
+• Marinov et al, “Direct anisotropic quad-dominant remeshing”, Pacific
+Graphics 2004<br>
+• Alliez et al, “Recent advances in remeshing of surfaces”, AIM@Shape
+state of the art report, 2006<br>
 </p>
-<table style="width:100%">
-  <tr align="center">
-    <td>
-      <img src="images/task2-3.jpg" align="middle" width="400px"/>
-      <figcaption>low density at t = 40</figcaption>
-    </td>
-    <td>
-      <img src="images/task2-4.jpg" align="middle" width="400px"/>
-      <figcaption>high density at t = 40</figcaption>
-    </td>
-  </tr>
-</table>
-
-<p>
-  For damping, the cloth takes comes to rest slowly without oscillating with high damping, while with low damping, the cloth
-  oscillates several times before coming to rest.
-</p>
-<table style="width:100%">
-  <tr align="center">
-    <td>
-      <img src="images/task2-5.jpg" align="middle" width="400px"/>
-      <figcaption>high damping at t = 40</figcaption>
-    </td>
-    <td>
-      <img src="images/task2-6.jpg" align="middle" width="400px"/>
-      <figcaption>low damping at some t</figcaption>
-    </td>
-  </tr>
-</table>
-<h3>
-  below is a screenshot of my shaded cloth from scene/pinned4.json in its final resting state.
-</h3>
-<table style="width:100%">
-  <tr align="center">
-    <td>
-      <img src="images/task2-7.jpg" align="middle" width="400px"/>
-      <figcaption>scene/pinned4.json at final state</figcaption>
-    </td>
-  </tr>
-</table>
-<br>
-
-</body>
-</html>
