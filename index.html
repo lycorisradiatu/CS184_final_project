@@ -22,10 +22,50 @@
 
 <body>
 <h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2024</h1>
-<h1 align="middle">Final Project</h1>
-<h2 align="middle">Angel Tu, Youxun Liu, Jiacheng Song, and </h2>
+<h1 align="middle">Final Project: Mesh regularization & multiple Subdivision Schemes</h1>
+<h2 align="middle">Angel Tu, Youxun Liu, Jiacheng Song, and Zhen Fu</h2>
 
 <div>
+<h2>
+  Summary
+</h2>
+<p>
+  In the final project, we are going to implement several mesh regularization methods and multiple subdivision schemes except for loop subdivision based on homework 2. Specifically, given an anisotropic triangle 
+  mesh, we are going to change certain vertices and edges based on some rules and implement different remeshing methods including Incremental remeshing and Variational remeshing. And then we will try alternate 
+  subdivision schemes like Butterfly scheme and Catmull-Clark.
+</p>
+
+<h2>
+  Problem Description
+</h2>
+<h3>
+  Problem and how to solve it
+</h3>
+<p>
+  For each mesh regularization method, we need to implement some local remeshing operators besides those we have implemented in homework 2, for example, edge collision and vertex shift. And then we need to 
+  consider which edges or vertex to operate, how to operate it, how to deal with boundaries or sharp edges, etc. and making all of these requirements as basic rules so we can do  automated Mesh Regularization. 
+  For subdivision, we need to implement multiple subdivision schemes and compare their different visual effects on images and the efficiency of the algorithms.
+</p>
+<h3>
+  Why it is important
+</h3>
+<p>
+  Mesh regularization, like the professor mentioned in lecture, is essential for visual fidelity and computational efficiency of further operations such as modeling, simulation and subdivision. Meshes derived 
+  from scanning or implicit representations often result in "raw" and unsatisfactory structures that are either too dense, non-uniform, or lack the necessary smoothness for further processing. Regularization can 
+  make the mesh more uniform, thus enhancing rendering efficiency for further mesh-based operations to process and analyze and enhancing quality of the final visual outcome. <br>
+  Subdivision is also very important for creating a smoother, more detailed representation. A good subdivision scheme can improve the smoothness of surfaces and adding more details in the mesh, which is crucial 
+  for creating high-resolution models required in high-end rendering, animations, and simulations.
+</p>
+<h3>
+  Where it is challenging
+</h3>
+<p>
+  One of the challenges in both mesh regularization and subdivision is to preserve the details and features in the mesh. They tend to smooth out the geometry, which can sometimes lead to the loss of intended 
+  sharp features. So our algorithm should optimize the mesh for compactness and smoothness while closely maintaining important geometric and visual details of the mesh. What’s more, the computational efficiency 
+  is another important factor we need to consider.
+</p>
+<br>
+  
 <h2>
   Goals and Deliverables
 </h2>
