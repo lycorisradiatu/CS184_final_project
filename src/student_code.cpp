@@ -404,7 +404,7 @@ namespace CGL
         while (h != e->halfedge()) {
           VertexIter v = h->next()->vertex();
           total_weight += get_s_j(tracker, v1->degree());
-          total_position += total_weight * v->position;
+          total_position += get_s_j(tracker, v1->degree()) * v->position;
           h = h->next()->next()->twin();
           tracker++;
         }
@@ -417,7 +417,7 @@ namespace CGL
         while (h != e->halfedge()->twin()) {
           VertexIter v = h->next()->vertex();
           total_weight += get_s_j(tracker, v2->degree());
-          total_position += total_weight * v->position;
+          total_position += get_s_j(tracker, v2->degree()) * v->position;
           h = h->next()->next()->twin();
           tracker++;
         }
