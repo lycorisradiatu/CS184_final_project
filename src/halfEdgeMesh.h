@@ -631,6 +631,10 @@ namespace CGL
          VertexIter      splitEdge( EdgeIter e ); ///< split an edge, returning a pointer to the inserted midpoint vertex; the halfedge of this vertex should refer to one of the edges in the original mesh
 
 
+         //Final project use
+         VertexIter      collapse( EdgeIter e ); /// < colapse the given edge and 
+         VertexIter      shift( VertexIter v );
+
          void check_for(HalfedgeIter h) {
           for (HalfedgeIter he = halfedgesBegin(); he != halfedgesEnd(); he++) {
             if (he == h)

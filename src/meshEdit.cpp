@@ -1,4 +1,5 @@
 #include "meshEdit.h"
+#include "halfEdgeMesh.h"
 #include "shaderUtils.h"
 #include "GL/glew.h"
 
@@ -258,6 +259,19 @@ namespace CGL {
       case 'T':
         selectTwinHalfedge();
         break;
+      case 'r':
+      case 'R':
+        reMeshing();
+      case 'd':
+      case 'D':
+        subDivision();
+      case 'c':
+      case 'C':
+        colapseSelectEdge();
+      case 'h':
+      case 'H':
+        shiftSelectVertex();
+
       case 'w':
       case 'W':
         shadingMode = !shadingMode;
@@ -266,6 +280,8 @@ namespace CGL {
       case 'Q':
         smoothShading = !smoothShading;
         break;
+
+      
       default:
         break;
     }
@@ -1556,6 +1572,40 @@ namespace CGL {
 
     // Since the mesh may have changed, the selected and
     // hovered features may no longer point to valid elements.
+    selectedFeature.invalidate();
+    hoveredFeature.invalidate();
+  }
+
+  /* Function to support subdivision scheme. */
+  void MeshEdit :: subDivision( void ) {
+    Edge* e = NULL;
+
+  }
+  /* Function to support remeshing scheme*/
+  void MeshEdit :: reMeshing( void ) {
+    Edge* e = NULL;
+
+  }
+  void MeshEdit :: colapseSelectEdge ( void ) {
+    Edge* e = NULL;
+    if (selectedFeature.isValid()) {
+      e = selectedFeature.element->getEdge();
+    }
+    if( e == NULL ) { cerr << "Must select an edge." << endl; return; }
+    selectedFeature.node->mesh.collapse( e->halfedge()->edge() );
+    
+    selectedFeature.invalidate();
+    hoveredFeature.invalidate();
+  }
+
+  void MeshEdit :: shiftSelectVertex ( void ) {
+    Vertex* v = NULL;
+    if (selectedFeature.isValid()) {
+      v = selectedFeature.element->getVertex();
+    }
+    if( v == NULL ) { cerr << "Must select an edge." << endl; return; }
+    selectedFeature.node->mesh.shift(v->halfedge()->vertex());
+
     selectedFeature.invalidate();
     hoveredFeature.invalidate();
   }

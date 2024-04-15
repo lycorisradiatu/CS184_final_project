@@ -313,4 +313,21 @@ namespace CGL
       v->position = v->newPosition;
     }
   }
+
+
+  VertexIter HalfedgeMesh::collapse (EdgeIter e0) {
+
+  }
+
+  VertexIter HalfedgeMesh::shift (VertexIter v0) {
+
+  }
+
+  void MeshResampler::remesh ( HalfedgeMesh& mesh) {
+
+  }
+
+  void MeshResampler::subdivision(HalfedgeMesh& mesh ) {
+
+  }
 }

@@ -364,6 +364,13 @@ class MeshEdit : public Renderer {
   void selectNextHalfedge( void );
   void selectTwinHalfedge( void );
 
+  // Written in Final project
+  void subDivision( void );
+  void reMeshing( void );
+  void colapseSelectEdge( void );
+  void shiftSelectVertex( void );
+  
+
   // The canonical resampler used to perform operations on meshes.
   MeshResampler resampler;
 
