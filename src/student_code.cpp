@@ -316,7 +316,56 @@ namespace CGL
 
 
   VertexIter HalfedgeMesh::collapse (EdgeIter e0) {
+      HalfedgeIter h0 = e0->halfedge();
+      HalfedgeIter h1 = h0->twin();
 
+      VertexIter v0 = h0->vertex();
+      VertexIter v1 = h1->vertex();
+
+      Vector3D newPosition = (v0->position + v1->position) / 2.0;
+
+      HalfedgeIter h = v0->halfedge();
+      do {
+          h->vertex() = v1;
+          h = h->twin()->next();
+      } while (h != v0->halfedge());
+
+      HalfedgeIter h2 = h0->next();
+      HalfedgeIter h3 = h2->next();
+      HalfedgeIter h4 = h3->twin()->next();
+      HalfedgeIter h5 = h4->next();
+      HalfedgeIter h6 = h1->next();
+      HalfedgeIter h7 = h6->next();
+      HalfedgeIter h8 = h6->twin()->next();
+      HalfedgeIter h9 = h8->next();
+
+      h3->vertex()->halfedge() = h4;
+      h7->vertex()->halfedge() = h7;
+
+      h4->face()->halfedge() = h4;
+      h8->face()->halfedge() = h8;
+
+      h5->next() = h2;
+      h2->next() = h4;
+      h9->next() = h7;
+      h7->next() = h8;
+
+      v1->position = newPosition;
+
+      deleteVertex(v0);
+      deleteEdge(e0);
+      deleteFace(h0->face());
+      deleteFace(h1->face());
+      deleteEdge(h3->edge());
+      deleteEdge(h6->edge());
+      deleteHalfedge(h3);
+      deleteHalfedge(h3->twin());
+      deleteHalfedge(h6);
+      deleteHalfedge(h6->twin());
+      deleteHalfedge(h0);
+      deleteHalfedge(h1);
+
+      return v1;
   }
 
   VertexIter HalfedgeMesh::shift (VertexIter v0) {
