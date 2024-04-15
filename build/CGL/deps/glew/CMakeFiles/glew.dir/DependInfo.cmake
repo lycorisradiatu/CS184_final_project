@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glew.c" "CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o" "gcc" "CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o.d"
-  "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glewinfo.c" "CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o" "gcc" "CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o.d"
-  "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/visualinfo.c" "CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o" "gcc" "CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o.d"
+  "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/glew.c" "CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o" "gcc" "CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o.d"
+  "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/glewinfo.c" "CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o" "gcc" "CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o.d"
+  "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/visualinfo.c" "CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o" "gcc" "CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

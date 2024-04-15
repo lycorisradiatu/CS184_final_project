@@ -1,4 +1,4 @@
-# Install script for directory: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src
+# Install script for directory: /Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,37 +34,37 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/src/libCGL.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/src/libCGL.a")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libCGL.a" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libCGL.a")
-    execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libCGL.a")
+    execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libCGL.a")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/src/CMakeFiles/CGL.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+  include("/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/src/CMakeFiles/CGL.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/CGL" TYPE FILE FILES
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/CGL.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/vector2D.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/vector3D.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/vector4D.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/matrix3x3.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/matrix4x4.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/quaternion.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/complex.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/color.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/osdtext.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/viewer.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/base64.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/tinyxml2.h"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/src/renderer.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/CGL.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/vector2D.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/vector3D.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/vector4D.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/matrix3x3.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/matrix4x4.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/quaternion.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/complex.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/color.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/osdtext.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/viewer.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/base64.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/tinyxml2.h"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/src/renderer.h"
     )
 endif()
 

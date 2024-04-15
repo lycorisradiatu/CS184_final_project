@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.28.1/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.28.1/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q
+CMAKE_SOURCE_DIR = "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build
+CMAKE_BINARY_DIR = "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build"
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include CGL/deps/glfw/CMakeFiles/uninstall.dir/compiler_depend.make
 include CGL/deps/glfw/CMakeFiles/uninstall.dir/progress.make
 
 CGL/deps/glfw/CMakeFiles/uninstall:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw && /usr/local/Cellar/cmake/3.28.1/bin/cmake -P /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/cmake_uninstall.cmake
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw" && /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -P /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/build/CGL/deps/glfw/cmake_uninstall.cmake
 
 uninstall: CGL/deps/glfw/CMakeFiles/uninstall
 uninstall: CGL/deps/glfw/CMakeFiles/uninstall.dir/build.make
@@ -78,10 +78,10 @@ CGL/deps/glfw/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : CGL/deps/glfw/CMakeFiles/uninstall.dir/build
 
 CGL/deps/glfw/CMakeFiles/uninstall.dir/clean:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw" && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : CGL/deps/glfw/CMakeFiles/uninstall.dir/clean
 
 CGL/deps/glfw/CMakeFiles/uninstall.dir/depend:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glfw /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glfw" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CGL/deps/glfw/CMakeFiles/uninstall.dir/depend
 

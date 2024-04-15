@@ -1,4 +1,4 @@
-# Install script for directory: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glfw
+# Install script for directory: /Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,17 +34,17 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glfw/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glfw/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/glfw3Config.cmake"
-    "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/glfw3ConfigVersion.cmake"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/glfw3Config.cmake"
+    "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/glfw3ConfigVersion.cmake"
     )
 endif()
 
@@ -52,7 +52,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw/glfwTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw/glfwTargets.cmake"
-         "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/Export/b5f57140962b61d5074bd0b13bcab45b/glfwTargets.cmake")
+         "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/Export/b5f57140962b61d5074bd0b13bcab45b/glfwTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw/glfwTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -65,19 +65,19 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/Export/b5f57140962b61d5074bd0b13bcab45b/glfwTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/Export/b5f57140962b61d5074bd0b13bcab45b/glfwTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/Export/b5f57140962b61d5074bd0b13bcab45b/glfwTargets-noconfig.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw" TYPE FILE FILES "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/Export/b5f57140962b61d5074bd0b13bcab45b/glfwTargets-noconfig.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/glfw3.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/glfw3.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/cmake_install.cmake")
+  include("/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/cmake_install.cmake")
 
 endif()
 

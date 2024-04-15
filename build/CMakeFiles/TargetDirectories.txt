@@ -1,47 +1,47 @@
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles/edit_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles/rebuild_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles/list_install_components.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles/install.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles/install/local.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles/install/strip.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/CMakeFiles/edit_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/CMakeFiles/rebuild_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/CMakeFiles/list_install_components.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/CMakeFiles/install.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/CMakeFiles/install/local.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/CMakeFiles/install/strip.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew/CMakeFiles/glew.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew/CMakeFiles/edit_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew/CMakeFiles/rebuild_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew/CMakeFiles/list_install_components.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew/CMakeFiles/install.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew/CMakeFiles/install/local.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew/CMakeFiles/install/strip.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/uninstall.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/edit_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/rebuild_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/list_install_components.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/install.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/install/local.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/CMakeFiles/install/strip.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/CMakeFiles/edit_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/CMakeFiles/rebuild_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/CMakeFiles/list_install_components.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/CMakeFiles/install.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/CMakeFiles/install/local.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/CMakeFiles/install/strip.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/src/CMakeFiles/CGL.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/src/CMakeFiles/edit_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/src/CMakeFiles/rebuild_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/src/CMakeFiles/list_install_components.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/src/CMakeFiles/install.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/src/CMakeFiles/install/local.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/src/CMakeFiles/install/strip.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/CMakeFiles/meshedit.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/CMakeFiles/edit_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/CMakeFiles/rebuild_cache.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/CMakeFiles/list_install_components.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/CMakeFiles/install.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/CMakeFiles/install/local.dir
-/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/CMakeFiles/install/strip.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles/edit_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles/rebuild_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles/list_install_components.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles/install.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles/install/local.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles/install/strip.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/CMakeFiles/edit_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/CMakeFiles/rebuild_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/CMakeFiles/list_install_components.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/CMakeFiles/install.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/CMakeFiles/install/local.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/CMakeFiles/install/strip.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew/CMakeFiles/glew.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew/CMakeFiles/edit_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew/CMakeFiles/rebuild_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew/CMakeFiles/list_install_components.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew/CMakeFiles/install.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew/CMakeFiles/install/local.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew/CMakeFiles/install/strip.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/uninstall.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/edit_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/rebuild_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/list_install_components.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/install.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/install/local.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/CMakeFiles/install/strip.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/CMakeFiles/edit_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/CMakeFiles/rebuild_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/CMakeFiles/list_install_components.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/CMakeFiles/install.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/CMakeFiles/install/local.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/CMakeFiles/install/strip.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/src/CMakeFiles/CGL.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/src/CMakeFiles/edit_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/src/CMakeFiles/rebuild_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/src/CMakeFiles/list_install_components.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/src/CMakeFiles/install.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/src/CMakeFiles/install/local.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/src/CMakeFiles/install/strip.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/CMakeFiles/meshedit.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/CMakeFiles/edit_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/CMakeFiles/rebuild_cache.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/CMakeFiles/list_install_components.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/CMakeFiles/install.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/CMakeFiles/install/local.dir
+/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/CMakeFiles/install/strip.dir

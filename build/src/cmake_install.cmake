@@ -1,4 +1,4 @@
-# Install script for directory: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src
+# Install script for directory: /Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,28 +34,28 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/meshedit")
+   "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/meshedit")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q" TYPE EXECUTABLE FILES "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/meshedit")
-  if(EXISTS "$ENV{DESTDIR}/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/meshedit" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/meshedit")
+  file(INSTALL DESTINATION "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project" TYPE EXECUTABLE FILES "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/meshedit")
+  if(EXISTS "$ENV{DESTDIR}/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/meshedit" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/meshedit")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" -u -r "$ENV{DESTDIR}/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/meshedit")
+      execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/strip" -u -r "$ENV{DESTDIR}/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/meshedit")
     endif()
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/CMakeFiles/meshedit.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+  include("/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/CMakeFiles/meshedit.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 

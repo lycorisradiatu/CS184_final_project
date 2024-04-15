@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.28.1/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.28.1/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q
+CMAKE_SOURCE_DIR = "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build
+CMAKE_BINARY_DIR = "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build"
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/meshedit.dir/depend.make
@@ -70,200 +70,200 @@ include src/CMakeFiles/meshedit.dir/progress.make
 include src/CMakeFiles/meshedit.dir/flags.make
 
 src/CMakeFiles/meshedit.dir/bezierPatch.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/bezierPatch.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/bezierPatch.cpp
+src/CMakeFiles/meshedit.dir/bezierPatch.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/bezierPatch.cpp
 src/CMakeFiles/meshedit.dir/bezierPatch.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/meshedit.dir/bezierPatch.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/bezierPatch.cpp.o -MF CMakeFiles/meshedit.dir/bezierPatch.cpp.o.d -o CMakeFiles/meshedit.dir/bezierPatch.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/bezierPatch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/meshedit.dir/bezierPatch.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/bezierPatch.cpp.o -MF CMakeFiles/meshedit.dir/bezierPatch.cpp.o.d -o CMakeFiles/meshedit.dir/bezierPatch.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/bezierPatch.cpp"
 
 src/CMakeFiles/meshedit.dir/bezierPatch.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/bezierPatch.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/bezierPatch.cpp > CMakeFiles/meshedit.dir/bezierPatch.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/bezierPatch.cpp" > CMakeFiles/meshedit.dir/bezierPatch.cpp.i
 
 src/CMakeFiles/meshedit.dir/bezierPatch.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/bezierPatch.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/bezierPatch.cpp -o CMakeFiles/meshedit.dir/bezierPatch.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/bezierPatch.cpp" -o CMakeFiles/meshedit.dir/bezierPatch.cpp.s
 
 src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/bezierCurve.cpp
+src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/bezierCurve.cpp
 src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o -MF CMakeFiles/meshedit.dir/bezierCurve.cpp.o.d -o CMakeFiles/meshedit.dir/bezierCurve.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/bezierCurve.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o -MF CMakeFiles/meshedit.dir/bezierCurve.cpp.o.d -o CMakeFiles/meshedit.dir/bezierCurve.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/bezierCurve.cpp"
 
 src/CMakeFiles/meshedit.dir/bezierCurve.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/bezierCurve.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/bezierCurve.cpp > CMakeFiles/meshedit.dir/bezierCurve.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/bezierCurve.cpp" > CMakeFiles/meshedit.dir/bezierCurve.cpp.i
 
 src/CMakeFiles/meshedit.dir/bezierCurve.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/bezierCurve.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/bezierCurve.cpp -o CMakeFiles/meshedit.dir/bezierCurve.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/bezierCurve.cpp" -o CMakeFiles/meshedit.dir/bezierCurve.cpp.s
 
 src/CMakeFiles/meshedit.dir/scene.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/scene.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/scene.cpp
+src/CMakeFiles/meshedit.dir/scene.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/scene.cpp
 src/CMakeFiles/meshedit.dir/scene.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/meshedit.dir/scene.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/scene.cpp.o -MF CMakeFiles/meshedit.dir/scene.cpp.o.d -o CMakeFiles/meshedit.dir/scene.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/meshedit.dir/scene.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/scene.cpp.o -MF CMakeFiles/meshedit.dir/scene.cpp.o.d -o CMakeFiles/meshedit.dir/scene.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/scene.cpp"
 
 src/CMakeFiles/meshedit.dir/scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/scene.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/scene.cpp > CMakeFiles/meshedit.dir/scene.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/scene.cpp" > CMakeFiles/meshedit.dir/scene.cpp.i
 
 src/CMakeFiles/meshedit.dir/scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/scene.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/scene.cpp -o CMakeFiles/meshedit.dir/scene.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/scene.cpp" -o CMakeFiles/meshedit.dir/scene.cpp.s
 
 src/CMakeFiles/meshedit.dir/camera.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/camera.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/camera.cpp
+src/CMakeFiles/meshedit.dir/camera.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/camera.cpp
 src/CMakeFiles/meshedit.dir/camera.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/meshedit.dir/camera.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/camera.cpp.o -MF CMakeFiles/meshedit.dir/camera.cpp.o.d -o CMakeFiles/meshedit.dir/camera.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/meshedit.dir/camera.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/camera.cpp.o -MF CMakeFiles/meshedit.dir/camera.cpp.o.d -o CMakeFiles/meshedit.dir/camera.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/camera.cpp"
 
 src/CMakeFiles/meshedit.dir/camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/camera.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/camera.cpp > CMakeFiles/meshedit.dir/camera.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/camera.cpp" > CMakeFiles/meshedit.dir/camera.cpp.i
 
 src/CMakeFiles/meshedit.dir/camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/camera.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/camera.cpp -o CMakeFiles/meshedit.dir/camera.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/camera.cpp" -o CMakeFiles/meshedit.dir/camera.cpp.s
 
 src/CMakeFiles/meshedit.dir/light.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/light.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/light.cpp
+src/CMakeFiles/meshedit.dir/light.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/light.cpp
 src/CMakeFiles/meshedit.dir/light.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/meshedit.dir/light.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/light.cpp.o -MF CMakeFiles/meshedit.dir/light.cpp.o.d -o CMakeFiles/meshedit.dir/light.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/light.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/meshedit.dir/light.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/light.cpp.o -MF CMakeFiles/meshedit.dir/light.cpp.o.d -o CMakeFiles/meshedit.dir/light.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/light.cpp"
 
 src/CMakeFiles/meshedit.dir/light.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/light.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/light.cpp > CMakeFiles/meshedit.dir/light.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/light.cpp" > CMakeFiles/meshedit.dir/light.cpp.i
 
 src/CMakeFiles/meshedit.dir/light.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/light.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/light.cpp -o CMakeFiles/meshedit.dir/light.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/light.cpp" -o CMakeFiles/meshedit.dir/light.cpp.s
 
 src/CMakeFiles/meshedit.dir/mesh.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/mesh.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/mesh.cpp
+src/CMakeFiles/meshedit.dir/mesh.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/mesh.cpp
 src/CMakeFiles/meshedit.dir/mesh.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/meshedit.dir/mesh.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/mesh.cpp.o -MF CMakeFiles/meshedit.dir/mesh.cpp.o.d -o CMakeFiles/meshedit.dir/mesh.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/meshedit.dir/mesh.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/mesh.cpp.o -MF CMakeFiles/meshedit.dir/mesh.cpp.o.d -o CMakeFiles/meshedit.dir/mesh.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/mesh.cpp"
 
 src/CMakeFiles/meshedit.dir/mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/mesh.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/mesh.cpp > CMakeFiles/meshedit.dir/mesh.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/mesh.cpp" > CMakeFiles/meshedit.dir/mesh.cpp.i
 
 src/CMakeFiles/meshedit.dir/mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/mesh.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/mesh.cpp -o CMakeFiles/meshedit.dir/mesh.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/mesh.cpp" -o CMakeFiles/meshedit.dir/mesh.cpp.s
 
 src/CMakeFiles/meshedit.dir/material.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/material.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/material.cpp
+src/CMakeFiles/meshedit.dir/material.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/material.cpp
 src/CMakeFiles/meshedit.dir/material.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/meshedit.dir/material.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/material.cpp.o -MF CMakeFiles/meshedit.dir/material.cpp.o.d -o CMakeFiles/meshedit.dir/material.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/meshedit.dir/material.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/material.cpp.o -MF CMakeFiles/meshedit.dir/material.cpp.o.d -o CMakeFiles/meshedit.dir/material.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/material.cpp"
 
 src/CMakeFiles/meshedit.dir/material.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/material.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/material.cpp > CMakeFiles/meshedit.dir/material.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/material.cpp" > CMakeFiles/meshedit.dir/material.cpp.i
 
 src/CMakeFiles/meshedit.dir/material.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/material.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/material.cpp -o CMakeFiles/meshedit.dir/material.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/material.cpp" -o CMakeFiles/meshedit.dir/material.cpp.s
 
 src/CMakeFiles/meshedit.dir/texture.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/texture.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/texture.cpp
+src/CMakeFiles/meshedit.dir/texture.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/texture.cpp
 src/CMakeFiles/meshedit.dir/texture.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/meshedit.dir/texture.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/texture.cpp.o -MF CMakeFiles/meshedit.dir/texture.cpp.o.d -o CMakeFiles/meshedit.dir/texture.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/meshedit.dir/texture.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/texture.cpp.o -MF CMakeFiles/meshedit.dir/texture.cpp.o.d -o CMakeFiles/meshedit.dir/texture.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/texture.cpp"
 
 src/CMakeFiles/meshedit.dir/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/texture.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/texture.cpp > CMakeFiles/meshedit.dir/texture.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/texture.cpp" > CMakeFiles/meshedit.dir/texture.cpp.i
 
 src/CMakeFiles/meshedit.dir/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/texture.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/texture.cpp -o CMakeFiles/meshedit.dir/texture.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/texture.cpp" -o CMakeFiles/meshedit.dir/texture.cpp.s
 
 src/CMakeFiles/meshedit.dir/collada.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/collada.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/collada.cpp
+src/CMakeFiles/meshedit.dir/collada.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/collada.cpp
 src/CMakeFiles/meshedit.dir/collada.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/meshedit.dir/collada.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/collada.cpp.o -MF CMakeFiles/meshedit.dir/collada.cpp.o.d -o CMakeFiles/meshedit.dir/collada.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/collada.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/meshedit.dir/collada.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/collada.cpp.o -MF CMakeFiles/meshedit.dir/collada.cpp.o.d -o CMakeFiles/meshedit.dir/collada.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/collada.cpp"
 
 src/CMakeFiles/meshedit.dir/collada.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/collada.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/collada.cpp > CMakeFiles/meshedit.dir/collada.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/collada.cpp" > CMakeFiles/meshedit.dir/collada.cpp.i
 
 src/CMakeFiles/meshedit.dir/collada.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/collada.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/collada.cpp -o CMakeFiles/meshedit.dir/collada.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/collada.cpp" -o CMakeFiles/meshedit.dir/collada.cpp.s
 
 src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/halfEdgeMesh.cpp
+src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/halfEdgeMesh.cpp
 src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o -MF CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o.d -o CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/halfEdgeMesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o -MF CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o.d -o CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/halfEdgeMesh.cpp"
 
 src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/halfEdgeMesh.cpp > CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/halfEdgeMesh.cpp" > CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.i
 
 src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/halfEdgeMesh.cpp -o CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/halfEdgeMesh.cpp" -o CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.s
 
 src/CMakeFiles/meshedit.dir/student_code.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/student_code.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/student_code.cpp
+src/CMakeFiles/meshedit.dir/student_code.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/student_code.cpp
 src/CMakeFiles/meshedit.dir/student_code.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/meshedit.dir/student_code.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/student_code.cpp.o -MF CMakeFiles/meshedit.dir/student_code.cpp.o.d -o CMakeFiles/meshedit.dir/student_code.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/student_code.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/meshedit.dir/student_code.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/student_code.cpp.o -MF CMakeFiles/meshedit.dir/student_code.cpp.o.d -o CMakeFiles/meshedit.dir/student_code.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/student_code.cpp"
 
 src/CMakeFiles/meshedit.dir/student_code.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/student_code.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/student_code.cpp > CMakeFiles/meshedit.dir/student_code.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/student_code.cpp" > CMakeFiles/meshedit.dir/student_code.cpp.i
 
 src/CMakeFiles/meshedit.dir/student_code.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/student_code.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/student_code.cpp -o CMakeFiles/meshedit.dir/student_code.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/student_code.cpp" -o CMakeFiles/meshedit.dir/student_code.cpp.s
 
 src/CMakeFiles/meshedit.dir/meshEdit.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/meshEdit.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/meshEdit.cpp
+src/CMakeFiles/meshedit.dir/meshEdit.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/meshEdit.cpp
 src/CMakeFiles/meshedit.dir/meshEdit.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/meshedit.dir/meshEdit.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/meshEdit.cpp.o -MF CMakeFiles/meshedit.dir/meshEdit.cpp.o.d -o CMakeFiles/meshedit.dir/meshEdit.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/meshEdit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/meshedit.dir/meshEdit.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/meshEdit.cpp.o -MF CMakeFiles/meshedit.dir/meshEdit.cpp.o.d -o CMakeFiles/meshedit.dir/meshEdit.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/meshEdit.cpp"
 
 src/CMakeFiles/meshedit.dir/meshEdit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/meshEdit.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/meshEdit.cpp > CMakeFiles/meshedit.dir/meshEdit.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/meshEdit.cpp" > CMakeFiles/meshedit.dir/meshEdit.cpp.i
 
 src/CMakeFiles/meshedit.dir/meshEdit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/meshEdit.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/meshEdit.cpp -o CMakeFiles/meshedit.dir/meshEdit.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/meshEdit.cpp" -o CMakeFiles/meshedit.dir/meshEdit.cpp.s
 
 src/CMakeFiles/meshedit.dir/main.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/main.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/main.cpp
+src/CMakeFiles/meshedit.dir/main.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/main.cpp
 src/CMakeFiles/meshedit.dir/main.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/meshedit.dir/main.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/main.cpp.o -MF CMakeFiles/meshedit.dir/main.cpp.o.d -o CMakeFiles/meshedit.dir/main.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/meshedit.dir/main.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/main.cpp.o -MF CMakeFiles/meshedit.dir/main.cpp.o.d -o CMakeFiles/meshedit.dir/main.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/main.cpp"
 
 src/CMakeFiles/meshedit.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/main.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/main.cpp > CMakeFiles/meshedit.dir/main.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/main.cpp" > CMakeFiles/meshedit.dir/main.cpp.i
 
 src/CMakeFiles/meshedit.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/main.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/main.cpp -o CMakeFiles/meshedit.dir/main.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/main.cpp" -o CMakeFiles/meshedit.dir/main.cpp.s
 
 src/CMakeFiles/meshedit.dir/png.cpp.o: src/CMakeFiles/meshedit.dir/flags.make
-src/CMakeFiles/meshedit.dir/png.cpp.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/png.cpp
+src/CMakeFiles/meshedit.dir/png.cpp.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/src/png.cpp
 src/CMakeFiles/meshedit.dir/png.cpp.o: src/CMakeFiles/meshedit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/meshedit.dir/png.cpp.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/png.cpp.o -MF CMakeFiles/meshedit.dir/png.cpp.o.d -o CMakeFiles/meshedit.dir/png.cpp.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/png.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/meshedit.dir/png.cpp.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/meshedit.dir/png.cpp.o -MF CMakeFiles/meshedit.dir/png.cpp.o.d -o CMakeFiles/meshedit.dir/png.cpp.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/png.cpp"
 
 src/CMakeFiles/meshedit.dir/png.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/meshedit.dir/png.cpp.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/png.cpp > CMakeFiles/meshedit.dir/png.cpp.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/png.cpp" > CMakeFiles/meshedit.dir/png.cpp.i
 
 src/CMakeFiles/meshedit.dir/png.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/meshedit.dir/png.cpp.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src/png.cpp -o CMakeFiles/meshedit.dir/png.cpp.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src/png.cpp" -o CMakeFiles/meshedit.dir/png.cpp.s
 
 # Object files for target meshedit
 meshedit_OBJECTS = \
@@ -303,21 +303,21 @@ meshedit: src/CMakeFiles/meshedit.dir/build.make
 meshedit: CGL/src/libCGL.a
 meshedit: CGL/deps/glew/libglew.a
 meshedit: CGL/deps/glfw/src/libglfw3.a
-meshedit: /usr/local/lib/libfreetype.dylib
-meshedit: /usr/local/lib/libfreetype.dylib
+meshedit: /opt/homebrew/lib/libfreetype.dylib
+meshedit: /opt/homebrew/lib/libfreetype.dylib
 meshedit: src/CMakeFiles/meshedit.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable ../meshedit"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/meshedit.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable ../meshedit"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/meshedit.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/meshedit.dir/build: meshedit
 .PHONY : src/CMakeFiles/meshedit.dir/build
 
 src/CMakeFiles/meshedit.dir/clean:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src && $(CMAKE_COMMAND) -P CMakeFiles/meshedit.dir/cmake_clean.cmake
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" && $(CMAKE_COMMAND) -P CMakeFiles/meshedit.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/meshedit.dir/clean
 
 src/CMakeFiles/meshedit.dir/depend:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/src /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/CMakeFiles/meshedit.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/src" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/CMakeFiles/meshedit.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/meshedit.dir/depend
 

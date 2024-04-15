@@ -1,4 +1,4 @@
-# Install script for directory: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glfw/src
+# Install script for directory: /Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,18 +34,18 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/libglfw3.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/libglfw3.a")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libglfw3.a" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libglfw3.a")
-    execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libglfw3.a")
+    execute_process(COMMAND "/Library/Developer/CommandLineTools/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libglfw3.a")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+  include("/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 

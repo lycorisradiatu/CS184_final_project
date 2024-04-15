@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.28.1/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.28.1/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q
+CMAKE_SOURCE_DIR = "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build
+CMAKE_BINARY_DIR = "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/usr/local/Cellar/cmake/3.28.1/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.28.1/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/usr/local/Cellar/cmake/3.28.1/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.28.1/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -97,49 +97,49 @@ list_install_components/fast: list_install_components
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.28.1/bin/cmake -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.28.1/bin/cmake -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.28.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.28.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.28.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.28.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew//CMakeFiles/progress.marks
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles 0
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew//CMakeFiles/progress.marks"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/clean
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/preinstall
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/preinstall
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 CGL/deps/glew/CMakeFiles/glew.dir/rule:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/CMakeFiles/glew.dir/rule
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CGL/deps/glew/CMakeFiles/glew.dir/rule
 .PHONY : CGL/deps/glew/CMakeFiles/glew.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ glew: CGL/deps/glew/CMakeFiles/glew.dir/rule
 
 # fast build rule for target.
 glew/fast:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/build
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/build
 .PHONY : glew/fast
 
 src/glew.o: src/glew.c.o
@@ -180,7 +180,7 @@ src/glew.o: src/glew.c.o
 
 # target to build an object file
 src/glew.c.o:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o
 .PHONY : src/glew.c.o
 
 src/glew.i: src/glew.c.i
@@ -188,7 +188,7 @@ src/glew.i: src/glew.c.i
 
 # target to preprocess a source file
 src/glew.c.i:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.i
 .PHONY : src/glew.c.i
 
 src/glew.s: src/glew.c.s
@@ -196,7 +196,7 @@ src/glew.s: src/glew.c.s
 
 # target to generate assembly for a file
 src/glew.c.s:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.s
 .PHONY : src/glew.c.s
 
 src/glewinfo.o: src/glewinfo.c.o
@@ -204,7 +204,7 @@ src/glewinfo.o: src/glewinfo.c.o
 
 # target to build an object file
 src/glewinfo.c.o:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o
 .PHONY : src/glewinfo.c.o
 
 src/glewinfo.i: src/glewinfo.c.i
@@ -212,7 +212,7 @@ src/glewinfo.i: src/glewinfo.c.i
 
 # target to preprocess a source file
 src/glewinfo.c.i:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.i
 .PHONY : src/glewinfo.c.i
 
 src/glewinfo.s: src/glewinfo.c.s
@@ -220,7 +220,7 @@ src/glewinfo.s: src/glewinfo.c.s
 
 # target to generate assembly for a file
 src/glewinfo.c.s:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.s
 .PHONY : src/glewinfo.c.s
 
 src/visualinfo.o: src/visualinfo.c.o
@@ -228,7 +228,7 @@ src/visualinfo.o: src/visualinfo.c.o
 
 # target to build an object file
 src/visualinfo.c.o:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o
 .PHONY : src/visualinfo.c.o
 
 src/visualinfo.i: src/visualinfo.c.i
@@ -236,7 +236,7 @@ src/visualinfo.i: src/visualinfo.c.i
 
 # target to preprocess a source file
 src/visualinfo.c.i:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.i
 .PHONY : src/visualinfo.c.i
 
 src/visualinfo.s: src/visualinfo.c.s
@@ -244,7 +244,7 @@ src/visualinfo.s: src/visualinfo.c.s
 
 # target to generate assembly for a file
 src/visualinfo.c.s:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(MAKE) $(MAKESILENT) -f CGL/deps/glew/CMakeFiles/glew.dir/build.make CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.s
 .PHONY : src/visualinfo.c.s
 
 # Help Target
@@ -280,6 +280,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

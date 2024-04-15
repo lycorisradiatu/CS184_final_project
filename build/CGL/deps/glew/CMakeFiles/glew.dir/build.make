@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/Cellar/cmake/3.28.1/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/Cellar/cmake/3.28.1/bin/cmake -E rm -f
+RM = /opt/homebrew/Cellar/cmake/3.28.1/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q
+CMAKE_SOURCE_DIR = "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build
+CMAKE_BINARY_DIR = "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build"
 
 # Include any dependencies generated for this target.
 include CGL/deps/glew/CMakeFiles/glew.dir/depend.make
@@ -70,46 +70,46 @@ include CGL/deps/glew/CMakeFiles/glew.dir/progress.make
 include CGL/deps/glew/CMakeFiles/glew.dir/flags.make
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o: CGL/deps/glew/CMakeFiles/glew.dir/flags.make
-CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glew.c
+CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/CGL/deps/glew/src/glew.c
 CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o: CGL/deps/glew/CMakeFiles/glew.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o -MF CMakeFiles/glew.dir/src/glew.c.o.d -o CMakeFiles/glew.dir/src/glew.c.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glew.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o -MF CMakeFiles/glew.dir/src/glew.c.o.d -o CMakeFiles/glew.dir/src/glew.c.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/glew.c"
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glew.dir/src/glew.c.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glew.c > CMakeFiles/glew.dir/src/glew.c.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/glew.c" > CMakeFiles/glew.dir/src/glew.c.i
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glew.dir/src/glew.c.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glew.c -o CMakeFiles/glew.dir/src/glew.c.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/glew.c" -o CMakeFiles/glew.dir/src/glew.c.s
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o: CGL/deps/glew/CMakeFiles/glew.dir/flags.make
-CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glewinfo.c
+CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/CGL/deps/glew/src/glewinfo.c
 CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o: CGL/deps/glew/CMakeFiles/glew.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o -MF CMakeFiles/glew.dir/src/glewinfo.c.o.d -o CMakeFiles/glew.dir/src/glewinfo.c.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glewinfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o -MF CMakeFiles/glew.dir/src/glewinfo.c.o.d -o CMakeFiles/glew.dir/src/glewinfo.c.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/glewinfo.c"
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glew.dir/src/glewinfo.c.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glewinfo.c > CMakeFiles/glew.dir/src/glewinfo.c.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/glewinfo.c" > CMakeFiles/glew.dir/src/glewinfo.c.i
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glew.dir/src/glewinfo.c.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/glewinfo.c -o CMakeFiles/glew.dir/src/glewinfo.c.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/glewinfo.c" -o CMakeFiles/glew.dir/src/glewinfo.c.s
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o: CGL/deps/glew/CMakeFiles/glew.dir/flags.make
-CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/visualinfo.c
+CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o: /Users/angeltu/Documents/UC\ Berkeley/CS\ 184/CS184_final_project/CGL/deps/glew/src/visualinfo.c
 CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o: CGL/deps/glew/CMakeFiles/glew.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o -MF CMakeFiles/glew.dir/src/visualinfo.c.o.d -o CMakeFiles/glew.dir/src/visualinfo.c.o -c /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/visualinfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o -MF CMakeFiles/glew.dir/src/visualinfo.c.o.d -o CMakeFiles/glew.dir/src/visualinfo.c.o -c "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/visualinfo.c"
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/glew.dir/src/visualinfo.c.i"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/visualinfo.c > CMakeFiles/glew.dir/src/visualinfo.c.i
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/visualinfo.c" > CMakeFiles/glew.dir/src/visualinfo.c.i
 
 CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/glew.dir/src/visualinfo.c.s"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew/src/visualinfo.c -o CMakeFiles/glew.dir/src/visualinfo.c.s
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && /Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew/src/visualinfo.c" -o CMakeFiles/glew.dir/src/visualinfo.c.s
 
 # Object files for target glew
 glew_OBJECTS = \
@@ -125,19 +125,19 @@ CGL/deps/glew/libglew.a: CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o
 CGL/deps/glew/libglew.a: CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o
 CGL/deps/glew/libglew.a: CGL/deps/glew/CMakeFiles/glew.dir/build.make
 CGL/deps/glew/libglew.a: CGL/deps/glew/CMakeFiles/glew.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libglew.a"
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && $(CMAKE_COMMAND) -P CMakeFiles/glew.dir/cmake_clean_target.cmake
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glew.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libglew.a"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && $(CMAKE_COMMAND) -P CMakeFiles/glew.dir/cmake_clean_target.cmake
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/glew.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CGL/deps/glew/CMakeFiles/glew.dir/build: CGL/deps/glew/libglew.a
 .PHONY : CGL/deps/glew/CMakeFiles/glew.dir/build
 
 CGL/deps/glew/CMakeFiles/glew.dir/clean:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew && $(CMAKE_COMMAND) -P CMakeFiles/glew.dir/cmake_clean.cmake
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" && $(CMAKE_COMMAND) -P CMakeFiles/glew.dir/cmake_clean.cmake
 .PHONY : CGL/deps/glew/CMakeFiles/glew.dir/clean
 
 CGL/deps/glew/CMakeFiles/glew.dir/depend:
-	cd /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/CGL/deps/glew /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/deps/glew/CMakeFiles/glew.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/CGL/deps/glew" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew" "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/deps/glew/CMakeFiles/glew.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CGL/deps/glew/CMakeFiles/glew.dir/depend
 

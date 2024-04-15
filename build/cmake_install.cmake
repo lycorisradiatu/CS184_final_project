@@ -1,8 +1,8 @@
-# Install script for directory: /Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q
+# Install script for directory: /Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/")
+  set(CMAKE_INSTALL_PREFIX "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,13 +34,13 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/CGL/cmake_install.cmake")
-  include("/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/src/cmake_install.cmake")
+  include("/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/CGL/cmake_install.cmake")
+  include("/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/src/cmake_install.cmake")
 
 endif()
 
@@ -52,5 +52,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/youxunliu/cs184/hw2-meshedit-sp24-angel-spades_q/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/angeltu/Documents/UC Berkeley/CS 184/CS184_final_project/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
