@@ -1,4 +1,5 @@
 #include "student_code.h"
+#include "CGL/matrix3x3.h"
 #include "CGL/renderer.h"
 #include "CGL/vector2D.h"
 #include "CGL/vector3D.h"
@@ -320,9 +321,38 @@ namespace CGL
   }
 
   VertexIter HalfedgeMesh::shift (VertexIter v0) {
+    //part 1 of equation
+    Vector3D ci = Vector3D(0,0,0);
+    HalfedgeIter begin = v0->halfedge();
+    do {
+      begin = begin->next();
+      ci += begin->getVertex()->position;
+      begin = begin->next()->next()->twin();
+    } while (begin != v0 ->halfedge());
+    ci /= v0->degree();
 
+  //part 2 of equation
+    double lambda = 0.68;
+    double* I;
+    double* data;
+    for(int i = 0 ; i < 3 ; i++) {
+      for (int j = 0; j < 3; j++) {
+        if (i == j) {
+          I[i*3 + j] = 1.0;
+        }
+        data[i*3 + j] = v0->normal()[i] * v0->normal()[j];
+      }
+    }
+
+    Matrix3x3 identity = Matrix3x3(I);
+    Matrix3x3 M = Matrix3x3(data);
+    
+    v0->position = v0->position + lambda*(identity - M) * (ci - v0->position);
+
+    return v0;
   }
 
+  //utilizing the loop-traversing used in hw
   void MeshResampler::remesh ( HalfedgeMesh& mesh) {
 
   }
