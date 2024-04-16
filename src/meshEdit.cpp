@@ -268,8 +268,8 @@ namespace CGL {
       case 'c':
       case 'C':
         colapseSelectEdge();
-      case 'h':
-      case 'H':
+      case 'm':
+      case 'M':
         shiftSelectVertex();
 
       case 'w':

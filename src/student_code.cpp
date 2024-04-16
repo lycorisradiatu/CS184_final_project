@@ -317,43 +317,64 @@ namespace CGL
 
 
   VertexIter HalfedgeMesh::collapse (EdgeIter e0) {
-
+    return VertexIter();
   }
 
   VertexIter HalfedgeMesh::shift (VertexIter v0) {
     //part 1 of equation
     Vector3D ci = Vector3D(0,0,0);
     HalfedgeIter begin = v0->halfedge();
+    std::cout << "her123123e is ok " << std::endl;
     do {
+      std::cout << "looping line 1 " << std::endl;
       begin = begin->next();
-      ci += begin->getVertex()->position;
-      begin = begin->next()->next()->twin();
+      ci += begin->vertex()->position;
+      begin = begin->next()->twin();
     } while (begin != v0 ->halfedge());
     ci /= v0->degree();
+  std::cout << "looping odne ok " << std::endl;
+
 
   //part 2 of equation
+  std::cout << "making matrix" << std::endl;
     double lambda = 0.68;
-    double* I;
-    double* data;
-    for(int i = 0 ; i < 3 ; i++) {
-      for (int j = 0; j < 3; j++) {
-        if (i == j) {
-          I[i*3 + j] = 1.0;
-        }
-        data[i*3 + j] = v0->normal()[i] * v0->normal()[j];
-      }
-    }
-
+    double I[9] = {1,0,0,0,1,0,0,0,1} ;
+    double data[9] = {v0->normal().x * v0->normal().x, v0->normal().x * v0->normal().y, v0->normal().x * v0->normal().z,
+                      v0->normal().y * v0->normal().x, v0->normal().y * v0->normal().y, v0->normal().z * v0->normal().z,
+                      v0->normal().z * v0->normal().x, v0->normal().y * v0->normal().z, v0->normal().z * v0->normal().z};
+    
+    std::cout << "making matrix" << std::endl;
+  
     Matrix3x3 identity = Matrix3x3(I);
     Matrix3x3 M = Matrix3x3(data);
-    
+    std::cout << "making matrix done" << std::endl;
+  
     v0->position = v0->position + lambda*(identity - M) * (ci - v0->position);
-
     return v0;
   }
 
   //utilizing the loop-traversing used in hw
   void MeshResampler::remesh ( HalfedgeMesh& mesh) {
+    //define Lmax for split edge and Lmin for collapse
+    double L = 1.87;
+    double L_max = 4/3* L;
+    double L_min = 4/5 * L;
+
+    //Spliting phase
+    int traversing = mesh.nEdges();
+    int reached = 0;
+    EdgeIter e = mesh.edgesBegin();
+    for (; reached != traversing; ) {
+      if (e->length() < L_max) {
+        reached++;
+      } else {
+        VertexIter v = mesh.splitEdge(e);
+        v->newPosition = e->newPosition;
+        
+        e++;  
+      }
+      
+    }
 
   }
 
