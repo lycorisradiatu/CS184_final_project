@@ -250,69 +250,184 @@ namespace CGL
 
   void MeshResampler::upsample( HalfedgeMesh& mesh )
   {
-    // TODO Part 6.
-    // This routine should increase the number of triangles in the mesh using Loop subdivision.
-    // One possible solution is to break up the method as listed below.
+      // Step A: Compute the positions of both new and old vertices using the original mesh.
 
-    // Step A: Compute the positions of both new and old vertices using the original mesh.
+      // (1) compute the position of a newly added vertex
+      
+      int w = 0;
+      for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
+          HalfedgeIter h = e->halfedge();
+          VertexIter v1 = h->vertex();
+          VertexIter v2 = h->twin()->vertex();
+          Vector3D new_position = Vector3D(0, 0, 0);
 
-    // (1) compute the position of a newly added vertex
-    for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
-      HalfedgeIter h = e->halfedge();
-      VertexIter a = h->vertex();
-      VertexIter b = h->next()->vertex();
-      VertexIter c = h->twin()->next()->next()->vertex();
-      VertexIter d = h->next()->next()->vertex();
-      e->isNew = false;
-      e->newPosition = 3.0/8 * a->position + 3.0/8 * b->position + 1.0/8 * c->position + 1.0/8 * d->position;
-    }
+          // 1. Boundary edges
+          if (e->isBoundary()) {
+              new_position = (v1->position + v2->position) / 2;
+              
+          }
 
-    // (2) update the position of an existing vertex. 
-    for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
-      int n = v->degree();
-      double u;
-      if (n == 3) {
-        u = 3.0/16;
-      } else {
-        u = 3.0/(8 * n);
+          // 2. The edge connects two vertices of valence 6
+          else if (v1->degree() == 6 && v2->degree() == 6) {
+              
+              Vector3D total_position = Vector3D();
+              double a = 0.5 - w;
+              double b = (0.125) + 2 * w;
+              double c = (-0.0625) - w;
+              double d = w;
+
+              int tracker = 0;
+              do {
+                  VertexIter v = h->next()->vertex();
+                  if (tracker == 0) {
+                      total_position += a * v->position;
+                  }
+                  else if (tracker == 1 || tracker == 5) {
+                      total_position += b * v->position;
+                  }
+                  else if (tracker == 2 || tracker == 4) {
+                      total_position += c * v->position;
+                  }
+                  else if (tracker == 3) {
+                      total_position += d * v->position;
+                  }
+                  h = h->next()->next()->twin();
+                  tracker++;
+              } while (h != e->halfedge());
+
+              tracker = 0;
+              h = h->twin();
+              do {
+                  VertexIter v = h->next()->vertex();
+                  if (tracker == 0) {
+                      total_position += a * v->position;
+                  }
+                  else if (tracker == 2 || tracker == 4) {
+                      total_position += c * v->position;
+                  }
+                  else if (tracker == 3) {
+                      total_position += d * v->position;
+                  }
+                  h = h->next()->next()->twin();
+                  tracker++;
+              } while (h != e->halfedge()->twin());
+
+              new_position = (total_position) / (2 * (a + b + 2 * c + d));
+              //std::cout << "debug11111111111111: v1 position: " << v1->position << "v2 position: " << v2->position << "new position: " << new_position << std::endl;
+          }
+
+          // 3. The edge connects a K-vertex (K != 6) and a 6-vertex
+          else if (v2->degree() == 6 && v1->degree() != 6) {
+              
+              int tracker = 0;
+              Vector3D total_position = Vector3D();
+              double total_weight = 0;
+
+              do {
+                  VertexIter v = h->next()->vertex();
+                  double s_j = get_s_j(tracker, v1->degree());
+                  total_weight += s_j;
+                  total_position += s_j * v->position;
+                  //std::cout << "debug11111111111111: v1 position: " << v1->position << "v2 position: " << v2->position << "new position: " << total_position << std::endl;
+                  h = h->next()->next()->twin();
+                  tracker++;
+              } while (h != e->halfedge());
+             /* total_position += v1->position * 0.75;
+              total_weight += 0.75;*/
+              new_position = total_position + 0.75 * v1->position;
+              //std::cout << "debug11111111111111: v1 position: " << v1->position << "v2 position: " << v2->position << "new position: " << new_position << std::endl;
+          }
+          else if (v1->degree() == 6 && v2->degree() != 6) {
+              
+              h = h->twin();
+              int tracker = 0;
+              Vector3D total_position = Vector3D();
+              double total_weight = 0;
+              do {
+                  VertexIter v = h->next()->vertex();
+                  double s_j = get_s_j(tracker, v2->degree());
+                  total_weight += s_j;
+                  total_position += s_j * v->position;
+                  h = h->next()->next()->twin();
+                  tracker++;
+              } while (h != e->halfedge()->twin());
+
+              /*total_position += v2->position * 0.75;
+              total_weight += 0.75;*/
+              new_position = total_position + 0.75 * v2->position;
+          }
+          // 4. The edge connects two extraordinary vertices
+          else {
+              int tracker = 0;
+              Vector3D total_position1 = Vector3D();
+              double total_weight1 = 0.0;
+
+              do {
+                  VertexIter v = h->next()->vertex();
+                  total_weight1 += get_s_j(tracker, v1->degree());
+                  total_position1 += get_s_j(tracker, v1->degree()) * v->position;
+                  h = h->next()->next()->twin();
+                  tracker++;
+              } while (h != e->halfedge());
+              //total_position1 += v1->position * 0.75;
+              //total_weight1 += 0.75;
+
+              h = h->twin();
+              tracker = 0;
+              Vector3D total_position2 = Vector3D();
+              double total_weight2 = 0.0;
+              do {
+                  VertexIter v = h->next()->vertex();
+                  double s_j = get_s_j(tracker, v2->degree());
+                  total_weight2 += s_j;
+                  total_position2 += s_j * v->position;
+                  h = h->next()->next()->twin();
+                  tracker++;
+              } while (h != e->halfedge()->twin());
+              //total_position2 += v2->position * 0.75;
+              //total_weight2 += 0.75;
+
+              new_position = ((total_position1 + 0.75 * v1->position) + (total_position2 + 0.75 * v2->position)) / 2;
+              //std::cout << "debug11111111111111: v1 position: " << v1->position << "v2 position: " << v2->position << "new position: " << (total_position1 / total_weight1) << std::endl;
+          }
+
+          e->isNew = false;
+          e->newPosition = new_position;
       }
-      Vector3D original_neighbor_position_sum = Vector3D(0, 0, 0);
-      HalfedgeIter h = v->halfedge();
-      do
-      {
-        original_neighbor_position_sum += h->next()->vertex()->position;
-        h = h->twin()->next();
+
+      // (2) mark existing vertex to be old. 
+      for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
+          v->isNew = false;
       }
-      while(h != v->halfedge());
-      v->newPosition = (1 - n * u) * v->position + u * original_neighbor_position_sum;
-      v->isNew = false;
-    }
 
-    // Step B: Subdivide the original mesh via edge splits and flips as described.
+      // Step B: Subdivide the original mesh via edge splits and flips as described.
 
-    // (1) Split every existing edge of the mesh in any order.
-    int old_edge_num = mesh.nEdges();
-    EdgeIter e = mesh.edgesBegin();
-    for (int i = 0; i != old_edge_num; i++) {
-      VertexIter v = mesh.splitEdge(e);
-      v->newPosition = e->newPosition;
-      e++;
-    }
-
-    // (2) Flip any new edge that connects an old vertex and a new vertex
-    for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
-      if (e->isNew && 
-      ((e->halfedge()->vertex()->isNew && !e->halfedge()->twin()->vertex()->isNew) ||
-      (!e->halfedge()->vertex()->isNew && e->halfedge()->twin()->vertex()->isNew)
-      )) {
-        mesh.flipEdge(e);
+      // (1) Split every existing edge of the mesh in any order.
+      int old_edge_num = mesh.nEdges();
+      EdgeIter e = mesh.edgesBegin();
+      for (int i = 0; i != old_edge_num; i++) {
+          VertexIter v = mesh.splitEdge(e);
+          v->newPosition = e->newPosition;
+          e++;
       }
-    }
-    
-    // Step C: Update all vertex positions in the subdivided mesh using the values already computed.
-    for (VertexIter v = mesh.verticesBegin(); v!= mesh.verticesEnd(); v++) {
-      v->position = v->newPosition;
-    }
+
+      // (2) Flip any new edge that connects an old vertex and a new vertex
+      for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
+          if (e->isNew &&
+              ((e->halfedge()->vertex()->isNew && !e->halfedge()->twin()->vertex()->isNew) ||
+                  (!e->halfedge()->vertex()->isNew && e->halfedge()->twin()->vertex()->isNew)
+                  )) {
+              mesh.flipEdge(e);
+          }
+      }
+
+      // Step C: Update all vertex positions in the subdivided mesh using the values already computed.
+      for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
+          if (v->isNew) {
+              v->position = v->newPosition;
+          }
+
+      }
   }
   
   double MeshResampler::get_s_j(int j, int K) {
@@ -335,7 +450,9 @@ namespace CGL
     else {
       return (0.25 + cos((2 * M_PI * j) / K) + 0.5 * cos((4 * M_PI * j) / K)) / K;
     }
-  } 
+  }
+
+  
 
   void MeshResampler::upsample_butterfly_scheme(HalfedgeMesh& mesh)
   {
@@ -351,7 +468,7 @@ namespace CGL
 
       // 1. Boundary edges
       if (e->isBoundary()) {
-
+        new_position = (v1->position + v2->position) / 2;
       }
 
       // 2. The edge connects two vertices of valence 6
@@ -401,55 +518,72 @@ namespace CGL
         int tracker = 0;
         Vector3D total_position = Vector3D();
         double total_weight = 0;
-        while (h != e->halfedge()) {
+
+        do {
           VertexIter v = h->next()->vertex();
           total_weight += get_s_j(tracker, v1->degree());
           total_position += get_s_j(tracker, v1->degree()) * v->position;
           h = h->next()->next()->twin();
           tracker++;
-        }
+        } while (h != e->halfedge());
+
         new_position = total_position / total_weight;
       } else if (v1->degree() == 6 && v2->degree() != 6) {
         h = h->twin();
         int tracker = 0;
         Vector3D total_position = Vector3D();
         double total_weight = 0;
-        while (h != e->halfedge()->twin()) {
+        do {
           VertexIter v = h->next()->vertex();
-          total_weight += get_s_j(tracker, v2->degree());
-          total_position += get_s_j(tracker, v2->degree()) * v->position;
+          double s_j = get_s_j(tracker, v2->degree());
+          total_weight += s_j;
+          total_position += s_j * v->position;
           h = h->next()->next()->twin();
           tracker++;
-        }
+        } while (h != e->halfedge()->twin());
+
         new_position = total_position / total_weight;
       }
       // 4. The edge connects two extraordinary vertices
       else {
+        int tracker = 0;
+        Vector3D total_position1 = Vector3D();
+        double total_weight1 = 0.0;
 
+        do {
+          VertexIter v = h->next()->vertex();
+          total_weight1 += get_s_j(tracker, v1->degree());
+          total_position1 += get_s_j(tracker, v1->degree()) * v->position;
+          h = h->next()->next()->twin();
+          tracker++;
+        } while (h != e->halfedge());
+        total_position1 += v1->position * 0.75;
+        total_weight1 += 0.75;
+
+        h = h->twin();
+        tracker = 0;
+        Vector3D total_position2 = Vector3D();
+        double total_weight2 = 0.0;
+        do {
+          VertexIter v = h->next()->vertex();
+          double s_j = get_s_j(tracker, v2->degree());
+          total_weight2 += s_j;
+          total_position2 += s_j * v->position;
+          h = h->next()->next()->twin();
+          tracker++;
+        } while (h != e->halfedge()->twin());
+        total_position2 += v2->position * 0.75;
+        total_weight2 += 0.75;
+
+        new_position = ((total_position1 / total_weight1) + (total_position2 / total_weight2)) / 2;
       }
 
       e->isNew = false;
       e->newPosition = new_position;
     }
 
-    // (2) update the position of an existing vertex. 
+    // (2) mark existing vertex to be old. 
     for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
-      // int n = v->degree();
-      // double u;
-      // if (n == 3) {
-      //   u = 3.0/16;
-      // } else {
-      //   u = 3.0/(8 * n);
-      // }
-      // Vector3D original_neighbor_position_sum = Vector3D(0, 0, 0);
-      // HalfedgeIter h = v->halfedge();
-      // do
-      // {
-      //   original_neighbor_position_sum += h->next()->vertex()->position;
-      //   h = h->twin()->next();
-      // }
-      // while(h != v->halfedge());
-      // v->newPosition = (1 - n * u) * v->position + u * original_neighbor_position_sum;
       v->isNew = false;
     }
 
