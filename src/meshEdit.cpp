@@ -261,17 +261,19 @@ namespace CGL {
         break;
       case 'r':
       case 'R':
-        reMeshing();
+        mesh_reMeshing();
+        break;
       case 'd':
       case 'D':
         subDivision();
       case 'c':
       case 'C':
         colapseSelectEdge();
+        break;
       case 'm':
       case 'M':
         shiftSelectVertex();
-
+        break;
       case 'w':
       case 'W':
         shadingMode = !shadingMode;
@@ -1582,9 +1584,27 @@ namespace CGL {
 
   }
   /* Function to support remeshing scheme*/
-  void MeshEdit :: reMeshing( void ) {
-    Edge* e = NULL;
+  void MeshEdit :: mesh_reMeshing( void ) {
+     HalfedgeMesh* mesh;
 
+    // If an element is selected, resample the mesh containing that
+    // element; otherwise, resample the first mesh in the scene.
+    if( selectedFeature.isValid() )
+    {
+      mesh = &( selectedFeature.node->mesh );
+    }
+    else
+    {
+      mesh = &( meshNodes.begin()->mesh );
+    }
+
+    resampler.remesh( *mesh );
+
+    // Since the mesh may have changed, the selected and
+    // hovered features may no longer point to valid elements.
+    selectedFeature.invalidate();
+    hoveredFeature.invalidate();
+    
   }
   void MeshEdit :: colapseSelectEdge ( void ) {
     Edge* e = NULL;
@@ -1603,7 +1623,7 @@ namespace CGL {
     if (selectedFeature.isValid()) {
       v = selectedFeature.element->getVertex();
     }
-    if( v == NULL ) { cerr << "Must select an edge." << endl; return; }
+    if( v == NULL ) { cerr << "Must select an vertex." << endl; return; }
     selectedFeature.node->mesh.shift(v->halfedge()->vertex());
 
     selectedFeature.invalidate();

@@ -317,37 +317,87 @@ namespace CGL
 
 
   VertexIter HalfedgeMesh::collapse (EdgeIter e0) {
-    return VertexIter();
+    
+    HalfedgeIter h0 = e0->halfedge();
+      HalfedgeIter h1 = h0->twin();
+
+      VertexIter v0 = h0->vertex();
+      VertexIter v1 = h1->vertex();
+
+      Vector3D newPosition = (v0->position + v1->position) / 2.0;
+
+      HalfedgeIter h = v0->halfedge();
+      do {
+          h->vertex() = v1;
+          h = h->twin()->next();
+      } while (h != v0->halfedge());
+    
+      HalfedgeIter h2 = h0->next();
+      HalfedgeIter h3 = h2->next();
+      HalfedgeIter h4 = h3->twin()->next();
+      HalfedgeIter h5 = h4->next();
+      HalfedgeIter h6 = h1->next();
+      HalfedgeIter h7 = h6->next();
+      HalfedgeIter h8 = h6->twin()->next();
+      HalfedgeIter h9 = h8->next();
+  
+      h3->vertex()->halfedge() = h4;
+      h7->vertex()->halfedge() = h7;
+
+      h4->face()->halfedge() = h4;
+      h8->face()->halfedge() = h8;
+
+      h5->next() = h2;
+      h2->next() = h4;
+      h9->next() = h7;
+      h7->next() = h8;
+
+      
+      v1->position = newPosition;
+      
+      deleteVertex(v0);
+      deleteEdge(e0);
+      deleteFace(h0->face());
+      deleteFace(h1->face());
+      deleteEdge(h3->edge());
+      deleteEdge(h6->edge());
+      deleteHalfedge(h3->twin());
+      deleteHalfedge(h3);
+      deleteHalfedge(h6->twin());
+      deleteHalfedge(h6);
+      deleteHalfedge(h0);
+      deleteHalfedge(h1);
+      return v1;
   }
 
   VertexIter HalfedgeMesh::shift (VertexIter v0) {
     //part 1 of equation
     Vector3D ci = Vector3D(0,0,0);
     HalfedgeIter begin = v0->halfedge();
-    std::cout << "her123123e is ok " << std::endl;
+  
     do {
-      std::cout << "looping line 1 " << std::endl;
+      
       begin = begin->next();
       ci += begin->vertex()->position;
       begin = begin->next()->twin();
     } while (begin != v0 ->halfedge());
     ci /= v0->degree();
-  std::cout << "looping odne ok " << std::endl;
+  
 
 
   //part 2 of equation
-  std::cout << "making matrix" << std::endl;
-    double lambda = 0.68;
+  
+    double lambda = 0.86;
     double I[9] = {1,0,0,0,1,0,0,0,1} ;
     double data[9] = {v0->normal().x * v0->normal().x, v0->normal().x * v0->normal().y, v0->normal().x * v0->normal().z,
                       v0->normal().y * v0->normal().x, v0->normal().y * v0->normal().y, v0->normal().z * v0->normal().z,
                       v0->normal().z * v0->normal().x, v0->normal().y * v0->normal().z, v0->normal().z * v0->normal().z};
     
-    std::cout << "making matrix" << std::endl;
+    
   
     Matrix3x3 identity = Matrix3x3(I);
     Matrix3x3 M = Matrix3x3(data);
-    std::cout << "making matrix done" << std::endl;
+   
   
     v0->position = v0->position + lambda*(identity - M) * (ci - v0->position);
     return v0;
@@ -358,23 +408,49 @@ namespace CGL
     //define Lmax for split edge and Lmin for collapse
     double L = 1.87;
     double L_max = 4/3* L;
-    double L_min = 4/5 * L;
+    double L_min = 3/5 * L;
+
+
+    int old_edge_num = mesh.nEdges();
+    EdgeIter e = mesh.edgesBegin();
+    std::cout << "remshing in progress" << std::endl;
+    for (int i = 0; i != old_edge_num; i++) {
+      //spliting phase
+      std::cout << "spliting phase" << std::endl;
+      if (e->halfedge()->edge()->length() > L_max) {
+       mesh.splitEdge(e);
+      }
+      std::cout << "collapse phase" << std::endl;
+      //collapse phase
+      if (e->halfedge()->edge()->length() < L_min) {
+        mesh.collapse(e);
+      }
+      std::cout << "fliping phase" << std::endl;
+      //fliping phase
+      if (e->halfedge()->vertex()->degree() > 6) {
+        mesh.flipEdge(e);
+      }
+      std::cout << "shifting phase" << std::endl;
+      //shifting and projecting phase
+      mesh.shift(e->halfedge()->vertex());
+     
+      e++;
+    }
+    std::cout << "remshing done" << std::endl;
 
     //Spliting phase
-    int traversing = mesh.nEdges();
-    int reached = 0;
-    EdgeIter e = mesh.edgesBegin();
-    for (; reached != traversing; ) {
-      if (e->length() < L_max) {
-        reached++;
-      } else {
-        VertexIter v = mesh.splitEdge(e);
-        v->newPosition = e->newPosition;
-        
-        e++;  
-      }
-      
-    }
+
+    //Collapsing phase
+
+    //Flipping pase
+
+
+
+    //shifting and projecting phase
+
+
+
+
 
   }
 

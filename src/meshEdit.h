@@ -366,7 +366,7 @@ class MeshEdit : public Renderer {
 
   // Written in Final project
   void subDivision( void );
-  void reMeshing( void );
+  void mesh_reMeshing( void );
   void colapseSelectEdge( void );
   void shiftSelectVertex( void );
   
