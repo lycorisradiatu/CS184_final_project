@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
+<title>CS 184 Mesh Editor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2024</h1>
+<h1 align="middle">Final Project: Mesh regularization & multiple Subdivision Schemes</h1>
+<h2 align="middle">Angel Tu, Youxun Liu, Jiacheng Song, and Zhen Fu</h2>
+
+<div>
+<h2>
+  Milestone
+</h2>
+<p>
+  In the final project, we are going to implement several mesh regularization methods and multiple subdivision schemes except for loop subdivision based on homework 2. Specifically, given an anisotropic triangle 
+  mesh, we are going to change certain vertices and edges based on some rules and implement different remeshing methods including Incremental remeshing and Variational remeshing. And then we will try alternate 
+  subdivision schemes like Butterfly scheme and Catmull-Clark.
+</p>
+
+<h2>
+  Problem Description
+</h2>
+<h3>
+  Problem and how to solve it
+</h3>
+<p>
+  For each mesh regularization method, we need to implement some local remeshing operators besides those we have implemented in homework 2, for example, edge collision and vertex shift. And then we need to 
+  consider which edges or vertex to operate, how to operate it, how to deal with boundaries or sharp edges, etc. and making all of these requirements as basic rules so we can do  automated Mesh Regularization. 
+  For subdivision, we need to implement multiple subdivision schemes and compare their different visual effects on images and the efficiency of the algorithms.
+</p>
+<h3>
+  Why it is important
+</h3>
+<p>
+  Mesh regularization, like the professor mentioned in lecture, is essential for visual fidelity and computational efficiency of further operations such as modeling, simulation and subdivision. Meshes derived 
+  from scanning or implicit representations often result in "raw" and unsatisfactory structures that are either too dense, non-uniform, or lack the necessary smoothness for further processing. Regularization can 
+  make the mesh more uniform, thus enhancing rendering efficiency for further mesh-based operations to process and analyze and enhancing quality of the final visual outcome. <br>
+  Subdivision is also very important for creating a smoother, more detailed representation. A good subdivision scheme can improve the smoothness of surfaces and adding more details in the mesh, which is crucial 
+  for creating high-resolution models required in high-end rendering, animations, and simulations.
+</p>
+<h3>
+  Where it is challenging
+</h3>
+<p>
+  One of the challenges in both mesh regularization and subdivision is to preserve the details and features in the mesh. They tend to smooth out the geometry, which can sometimes lead to the loss of intended 
+  sharp features. So our algorithm should optimize the mesh for compactness and smoothness while closely maintaining important geometric and visual details of the mesh. What’s more, the computational efficiency 
+  is another important factor we need to consider.
+</p>
+<br>
+  
+<h2>
+  Goals and Deliverables
+</h2>
+<h3>
+  What we are trying to accomplish?
+</h3> 
+<p>
+  We want to implement different remeshing methods including Isotropic remeshing and Anisotropic remeshing and also
+  try alternate subdivision schemes like Butterfly scheme and Catmull-Clark.
+</p>
+<h3>
+  What results are we going for?
+</h3>
+<p>
+  We'd like to use same mesh to produce multiple images using different methods mentioned above to see the
+  different effects these methods have on images. If have time, we might also want to increase the performace of remeshing and subdivision.
+</p>
+<h3>
+  Why we think we can accomplish those goals?
+</h3>
+<p>
+  We found multiple papers and slides that can help us with the different remeshing and subdivision methods. We believe with the help
+  of course material and previous homework, we will be able to accomplish these goals.
+</p>
+<h3>
+  How do we measure the quality/performance?
+</h3>
+<p>
+  Couple factors about mesh Quality that we would look at are “Area ratio”: length ratio between the longest edge and shortest edge. 
+  “Angle skew”: angles within the triangle mesh must tend to have a normal distribution. “Element Area”: mesh area must also tend to have 
+  a reasonable normal distribution based on function’s input. We check if the rendered image satisfy our input to the image. 
+</p> 
+<h3>
+  Questions we plan to answer.
+</h3>
+  <p>
+    We would explain how we implement each feature, and how each feature work together to get to our desired result. In order to express the changes on each features, 
+    we would render images that used different combinations of our features and compare them to our preprocessed image.
+  </p>
+<h3>
+    Plans/Goals
+</h3>
+  <p>1.We would have a good model that can work on different complexity of geometry shapes. Cow for simple, teapot for medium, and face/dragon for complex. And the run time of features would grow in linear in respect to the complexity of the geometry.
+</p>
+  <p>2.If we are very ahead on the schedule, we may dive deep into algorithm runtime optimizations.</p>
+</div>
+
+<div>
+<h2>
+    Schedule
+</h2>
+<p>
+    • 4/2 Proposal due<br>
+    • 4/3-4/7Remeshing Literature review<br>
+    • 4/8-4/11 Implements local remeshing operators and incremental remeshing<br>
+    • 4/12-4/14 Variational remeshing<br>
+    • 4/15 Milestone deliverable<br>
+    • 4/16 Graded Milestone Due”<br>
+    • 4/17-4/20 Subdivision literature Review<br>
+    • 4/21-27 remeshing<br>
+    • 4/28-29 final deliverables<br>
+    • 4/30 Final Deliverables (Report & Video) Due<br>
+</p>
+</div>
+
+<div>  
+<h2>
+    Resources
+</h2>
+<p>
+    • Textbook: Chapter 6<br>
+    • Alliez et al, “Interactive geometry remeshing”, SIGGRAPH 2002<br>
+    • Alliez et al, “Isotropic surface remeshing”, SMI 2003<br>
+    • Alliez et al, “Anisotropic polygonal remeshing”, SIGGRAPH 2003<br>
+    • Vorsatz et al, “Dynamic remeshing and applications”, Solid Modeling 2003<br>
+    • Botsch & Kobbelt, “A remeshing approach to multiresolution modeling”,
+    Symp. on Geometry Processing 2004<br>
+    • Marinov et al, “Direct anisotropic quad-dominant remeshing”, Pacific
+    Graphics 2004<br>
+    • Alliez et al, “Recent advances in remeshing of surfaces”, AIM@Shape
+    state of the art report, 2006<br>
+</p>
+</div>
+
+</body>
+</html>  
