@@ -75,9 +75,18 @@
   Remeshing
 </h3>
 <p>
-  For remeshing, the standard procedure for the mesh is looping these 5 steps: Spliting, Collapsing, Flipping, vertex shifting, and projection.
-  We continue from where we left off on homework 2, we wrote the sub-procedure of shifting and collapse. We are currently trying to explore our 
-  scheme in looping all elements in a Mesh.
+  For remeshing, Continuing from where we left off on homework 2, we implement extra local operations like edge collapsing and vertex shifting. And then we combine all these 
+  operations to implement our incremental remeshing method. <br>
+  To be more specific, For the collapseEdge function, it takes an edge as input and outputs a vertex. Our goal is to collapse the input edge to get a new mesh. 
+  Suppose the two vertices of this edge are v0 and v1, and we want to remove v0. Firstly, we traverse all the halfedges that have v0 as their vertex and modify 
+  their vertices to v1. Secondly, we reassign certain halfedges corresponding to some vertices and faces to prevent them from pointing to the halfedges that will 
+  be deleted. Then we reorganize the relationships between the halfedges so that they connect to form new triangles. Finally, we delete the surplus edges, faces, 
+  vertex and halfedges. <br>
+  And for vertex shifting, we sum up the positions of all vertices adjacent to the selected vertex and take the average to calculate the average 
+  position of the surrounding vertices. Then, we constrain the position of the vertex on surface through projection, rather than directly assigning the average 
+  position to this vertex. <br>
+  Finally, we loop through Spliting, Collapsing, Flipping, vertex shifting, and projection to get our remeshed result. Unfortunately, there might still be some bugs
+  in our remeshing function so the mesh looks kind of strange after remeshing. We will try to fix it later.<br>
 </p>
 
 <p>Collapsing: </p>
@@ -105,7 +114,8 @@
 </h2>
 <p>
     • 4/17-4/20 Subdivision literature Review<br>
-    • 4/21-27 remeshing<br>
+    • 4/21-24 different remeshing methods and debugging<br>
+    • 4/25-27 more subdivision schmes<br>
     • 4/28-29 final deliverables<br>
     • 4/30 Final Deliverables (Report & Video) Due<br>
 </p>
