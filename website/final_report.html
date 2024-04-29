@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+    body {
+        padding: 100px;
+        width: 1000px;
+        margin: auto;
+        text-align: left;
+        font-weight: 300;
+        font-family: 'Open Sans', sans-serif;
+        color: #121212;
+    }
+    h1, h2, h3, h4 {
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+</style>
+<title>CS 184 Mesh Editor</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+</head>
+
+<body>
+<h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2024</h1>
+<h1 align="middle">Final Project: Mesh regularization & multiple Subdivision Schemes</h1>
+<h2 align="middle">Angel Tu, Youxun Liu, Jiacheng Song, and Zhen Fu</h2>
+<h3 align="middle">Slides URL: <a href="https://docs.google.com/presentation/d/1e0tIkZtQ42brzklOMBHkXxpnOtOaYnOC0PyboJF8Lvo/edit#slide=id.p">Presentation Slides</a></h3>
+
+<div>
+<h2>
+    Abstract
+</h2>
+<p>
+    In this project, we explored different subdivision schemes and remeshing. 
+    We implementated the modified butterfly subdivision shceme and the sqrt 3 subdivision. 
+    We also implemented collapse and shifting procedure of remeshing.
+</p>
+
+<h2>
+    Technical approach
+</h2>
+<h3>
+    Modified Butterfly Subdivision Scheme
+</h3>
+<p>
+    When we implement butterfly scheme, we computes a new scalar value for each edge midpoint of the triangulation with four 
+    distinguish cases.
+</p>
+<p>
+    Case 1: The edge connects two vertices of valence 6. We calculate weighted position of the new vertex
+    according to the following graph with a, b, c, and d representing different weights
+</p>
+    <img src="images/butterfly_scheme_1.png" align="middle" width="400px"/>
+<p>
+    Case 2: The edge connects a K-vertex (K != 6) and a 6-vertex. We calculate weighted position of the new vertex
+    according to the following graph with s0 to sj representing different weights depending on the value of K.
+</p>
+    <img src="images/butterfly_scheme_2.png" align="middle" width="400px"/>
+<p>
+    Case 3: The edge connects two extraordinary vertices. In this case, we take the average of the values computed using the 
+    method shown on case 2.
+</p>
+<p>
+    Case 4: Boundary Edges. In this case, we calculate the position of the new vertex using the 1-dimensional 4 point scheme.
+</p>
+<h4>
+    Video
+</h4>
+<video width="640" height="360" controls>
+    <source src="images/bandicam 2024-04-16 18-46-21-521.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<h3>
+    Remeshing
+</h3>
+<p>
+    Continuing from where we left off on homework 2, we implement extra local operations like edge collapsing and vertex shifting. And then we combine all these 
+    operations to implement our incremental remeshing method. <br>
+    To be more specific, For the <b>collapseEdge</b> function, it takes an edge as input and outputs a vertex. Our goal is to collapse the input edge to get a new mesh. 
+    Suppose the two vertices of this edge are v0 and v1, and we want to remove v0. Firstly, we traverse all the halfedges that have v0 as their vertex and modify 
+    their vertices to v1. Secondly, we reassign certain halfedges corresponding to some vertices and faces to prevent them from pointing to the halfedges that will 
+    be deleted. Then we reorganize the relationships between the halfedges so that they connect to form new triangles. Finally, we delete the surplus edges, faces, 
+    vertex and halfedges. <br>
+    And for <b>vertex shifting</b>, we sum up the positions of all vertices adjacent to the selected vertex and take the average to calculate the average 
+    position of the surrounding vertices. Then, we constrain the position of the vertex on surface through projection, rather than directly assigning the average 
+    position to this vertex. <br>
+    Finally, we loop through Spliting, Collapsing, Flipping, vertex shifting, and projection to get our remeshed result. Unfortunately, there might still be some bugs
+    in our remeshing function so the mesh looks kind of strange after remeshing. We will try to fix it later.<br>
+</p>
+
+<p>Collapsing: </p>
+<img src="images/collapsebefore.png" align="middle" width="400px"/>
+<img src="images/collapseafter.png" align="middle" width="400px"/>
+
+<p>Shifting: </p>
+<img src="images/shiftbefore.png" align="middle" width="400px"/>
+<img src="images/shiftafter.png" align="middle" width="400px"/>
+
+<video width="640" height="360" controls>
+    <source src="images/remeshing_progress.mp4" type="video/mp4">
+</video>
+  
+<h2>
+    Results
+</h2>
+<p>
+    
+</p>
+  
+<h2>
+    References
+</h2>
+<p>
+    • https://mrl.cs.nyu.edu/~dzorin/papers/zorin1996ism.pdf<br>
+    • https://www.graphics.rwth-aachen.de/media/papers/sqrt31.pdf<br>
+</p>
+
+<h2>
+    Contributions from each team member
+</h2>
+<p>
+    • Angel Tu: <br>
+    • Jiacheng Song: <br>
+    • Youxun Liu: <br>
+    • Zhen Fu: <br>
+</p>
+
+</div>
+
+</body>
+</html>  
