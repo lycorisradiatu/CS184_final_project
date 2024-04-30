@@ -269,6 +269,16 @@ namespace CGL {
       case 'B':
           mesh_butterfly();
           break;
+
+
+      case 'v':
+      case 'V':
+        call_upsamp_sq3_r();
+        break;
+      case 'z':
+      case 'Z':
+        call_upsamp_sq3_r();
+        break;
       default:
         break;
     }
@@ -1004,9 +1014,6 @@ namespace CGL {
   }
 
 
-
-
-
   inline void MeshEdit::drawString(float x, float y, string str, size_t size, Color c)
   {
     int line_index = text_mgr.add_line(( x*2/screen_w) - 1.0,
@@ -1589,4 +1596,49 @@ namespace CGL {
     selectedFeature.invalidate();
     hoveredFeature.invalidate();
   }
+
+  void MeshEdit :: call_upsamp_sq3_r( void )  {
+    HalfedgeMesh* mesh;
+
+      // If an element is selected, resample the mesh containing that
+      // element; otherwise, resample the first mesh in the scene.
+      if (selectedFeature.isValid())
+      {
+          mesh = &(selectedFeature.node->mesh);
+      }
+      else
+      {
+          mesh = &(meshNodes.begin()->mesh);
+      }
+
+      resampler.upsample_sqrt3_refinement(*mesh);
+
+      // Since the mesh may have changed, the selected and
+      // hovered features may no longer point to valid elements.
+      selectedFeature.invalidate();
+      hoveredFeature.invalidate();
+  }
+
+  void MeshEdit :: call_upsamp_sq3 ( void ) {
+    HalfedgeMesh* mesh;
+
+      // If an element is selected, resample the mesh containing that
+      // element; otherwise, resample the first mesh in the scene.
+      if (selectedFeature.isValid())
+      {
+          mesh = &(selectedFeature.node->mesh);
+      }
+      else
+      {
+          mesh = &(meshNodes.begin()->mesh);
+      }
+
+      resampler.upsample_sqrt3(*mesh);
+
+      // Since the mesh may have changed, the selected and
+      // hovered features may no longer point to valid elements.
+      selectedFeature.invalidate();
+      hoveredFeature.invalidate();
+  }
+
 } // namespace CMU462

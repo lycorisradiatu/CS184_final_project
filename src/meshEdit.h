@@ -362,6 +362,8 @@ class MeshEdit : public Renderer {
 
   //Final project function
   void mesh_butterfly();
+  void call_upsamp_sq3_r( void ) ;
+  void call_upsamp_sq3 ( void ) ;
 
 
   // If a halfedge is selected, advances to the next or twin halfedge.
