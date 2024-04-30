@@ -86,6 +86,47 @@
 <img src="images/sqrt3_1.png" align="middle" width="400px"/>
 <img src="images/sqrt3_2.png" align="middle" width="400px"/>
 
+<h4>Adaptive Refinement in Sqrt3-Subdivision Scheme</h4>
+
+<p>
+    One of the advantage in the Sqrt3-Subdivision Scheme is that it is better suited for adaptive refinement. The 
+    consistency preserving adaptive refinement can easily be implemented by a simple recursive procedure.
+</p>
+<p>
+    For refinement schemes based on the dyadic split operation,  the
+    local splitting of one triangular face causes gaps if neighboring
+    faces are not refined (as shown on left). These gaps have to be removed
+    by replacing the adjacent (unrefined) faces with a triangle fan. As
+    shown on the right, this simple strategy tends to generate very badly
+    shaped triangles if no balance of the refinement is enforced.
+    <br>
+
+</p>
+
+<div align="middle">
+    <table>
+        <tr align="middle">
+        <td>
+            <img src="images/adaptive_1.jpg" align="middle" width="400px"/>
+            <figcaption align="middle"> The gap between triangles from different refinement levels
+                can be fixed by temporarily replacing the larger face by a triangle
+                fan</figcaption>
+        </td>
+        <td>
+            <img src="images/adaptive_2.jpg" align="middle" width="400px"/>
+            <figcaption align="middle"> The gap fixing by triangle fans tends to produce degenerate triangles if the refinement is not balanced (left). Balancing
+                the refinement, however, causes a larger region of the mesh to be
+                affected by local refinement (right).</figcaption>
+        </td>
+        </tr>
+    </table>
+</div>
+<p>
+    The adaptive refinement can be implemented by the following recursive procedure:
+</p>
+<img src="images/adaptive_3.jpg" align="middle" width="400px"/>
+            <figcaption> Recursive Procedure</figcaption>
+
 <h3>
     Remeshing
 </h3>
@@ -111,7 +152,7 @@
     Subdivision
 </h3>
 <h3>
-    Example 1
+    Cube.dae
 </h3>
 <h4>
     Modified Butterfly Subdivision Scheme
@@ -177,7 +218,7 @@
         </table>
     </div>
 <h3>
-    Example 2
+    teapot.dae
 </h3>
 <h4>
     Modified Butterfly Subdivision Scheme
@@ -246,6 +287,29 @@
     As the images shown, all three schemes have the effect of smooth and finer. The Sqrt3 scheme forms fewer triangles compare to 
     other schemes at the level goes up. The modified butterfly scheme produce images with more sharpness.
 </p>
+
+<h3>
+    teapot.dae
+</h3>
+<h4>
+    Adaptive refinement in sqrt3-Subdivision with random criteria
+</h4>
+    <div align="middle">
+        <table>
+            <tr align="middle">
+            <td>
+                <img src="images/adaptive_4.jpg" align="middle" width="400px"/>
+                <figcaption align="middle">With recursive split</figcaption>
+            </td>
+            <td>
+                <img src="images/adaptive_5.jpg" align="middle" width="400px"/>
+                <figcaption align="middle">without recursive split</figcaption>
+            </td>
+            </tr>
+        </table>
+    </div>
+
+
 <h4>
     Video
 </h4>
