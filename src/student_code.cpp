@@ -175,7 +175,7 @@ namespace CGL
     } else {
       HalfedgeIter h = e0->halfedge();
       HalfedgeIter twin = h->twin();
-      std::cout << "spliting debug: 1" << std::endl;
+      
       VertexIter b = h->vertex();
       VertexIter c = h->twin()->vertex();
       VertexIter a = h->next()->next()->vertex();
@@ -183,7 +183,6 @@ namespace CGL
 
       FaceIter f1 = h->face();
       FaceIter f2 = h->twin()->face();
-    std::cout << "spliting debug: 11" << std::endl;
       HalfedgeIter ac = h->next();
       HalfedgeIter ab = h->next()->next();
       HalfedgeIter bd = h->twin()->next();
@@ -191,14 +190,13 @@ namespace CGL
 
       // faces go counterclockwise
       // create a new vertex, two new triangles, three new edges
-      std::cout << "spliting debug: 12" << std::endl;
+     
       VertexIter m = newVertex();
       FaceIter f3 = newFace();
       FaceIter f4 = newFace();
       EdgeIter mb = newEdge();
       EdgeIter am = newEdge();
       EdgeIter md = newEdge();
-      std::cout << "spliting debug: 123" << std::endl;
       HalfedgeIter am_half = newHalfedge();
       HalfedgeIter ma_half = newHalfedge();
       HalfedgeIter mb_half = newHalfedge();
@@ -208,7 +206,6 @@ namespace CGL
 
       m->halfedge() = h;
       m->position = (h->vertex()->position + twin->vertex()->position) / 2;
-      std::cout << "spliting debug: 12123" << std::endl;
       ac->setNeighbors(am_half, ac->twin(), c, ac->edge(), f1);
       ab->setNeighbors(bm_half, ab->twin(), a, ab->edge(), f3);
       bd->setNeighbors(dm_half, bd->twin(), b, bd->edge(), f4);
@@ -216,7 +213,6 @@ namespace CGL
 
       h->setNeighbors(ac, twin, m, e0, f1);
       twin->setNeighbors(md_half, h, c, e0, f2);
-      std::cout << "spliting debug: 12123123" << std::endl;
       am_half->setNeighbors(h, ma_half, a, am, f1);
       ma_half->setNeighbors(ab, am_half, m, am, f3);
       mb_half->setNeighbors(bd, bm_half, m, mb, f4);
@@ -228,7 +224,6 @@ namespace CGL
       b->halfedge() = bd;
       c->halfedge() = twin;
       d->halfedge() = cd;
-      std::cout << "spliting debug: down" << std::endl;
       f1->halfedge() = h;
       f2->halfedge() = twin;
       f3->halfedge() = bm_half;
@@ -329,7 +324,6 @@ namespace CGL
       Vector3D newPosition = (v0->position + v1->position) / 2.0;
 
       HalfedgeIter h = v0->halfedge();
-      std::cout << "collapse stage 1" << std::endl;
       do {
           h->vertex() = v1;
           h = h->twin()->next();
@@ -349,7 +343,6 @@ namespace CGL
 
       h4->face()->halfedge() = h4;
       h8->face()->halfedge() = h8;
-      std::cout << "collapse stage 2" << std::endl;
       h2->setNeighbors(h4, h2->twin(), v1, h2->edge(), h4->face());
       h4->setNeighbors(h5, h4->twin(), h3->vertex(), h4->edge(), h4->face());
       h5->setNeighbors(h2, h5->twin(), h5->vertex(), h5->edge(), h4->face());
@@ -360,7 +353,6 @@ namespace CGL
       v1->halfedge() = h2;
       v1->position = newPosition;
       
-      std::cout << "collapse stage 3" << std::endl;
       
       
       deleteFace(h0->face());
@@ -370,16 +362,13 @@ namespace CGL
       deleteEdge(e0);
       deleteEdge(h3->edge());
       deleteEdge(h6->edge());
-      std::cout << "collapse stage 3.1" << std::endl;
       deleteHalfedge(h3->twin());
       deleteHalfedge(h3);
       deleteHalfedge(h6->twin());
       deleteHalfedge(h6);
-      std::cout << "collapse stage 3.12" << std::endl;
       deleteHalfedge(h0);
       deleteHalfedge(h1);
       deleteVertex(v0);
-      std::cout << "collapse stage 3.34" << std::endl;
       return v1;
   }
 
@@ -433,32 +422,38 @@ namespace CGL
 
     int old_edge_num = mesh.nEdges();
     EdgeIter e = mesh.edgesBegin();
-    std::cout << "remshing in progress" << std::endl;
+    std::cout << "remshing in progress split" << std::endl;
     for (int i = 0; i != old_edge_num; i++) {
       //spliting phase
-      std::cout << "spliting phase" << std::endl;
-      e->halfedge();
-      std::cout << "spliting phase12, reporting edge" << std::endl;
-      e->halfedge()->edge();
-      std::cout << "spliting phase23, edge reported, reproting elngth" << std::endl;
-      e->halfedge()->edge()->length();
+
       if (e->halfedge()->edge()->length() > L_max) {
         std::cout << "spliting phase entered" << std::endl;
         mesh.splitEdge(e);
       }
-      std::cout << "spliting phase1" << std::endl;
-      std::cout << "collapse phase" << std::endl;
-      //collapse phase
-      if (e->halfedge()->edge()->length() < L_min) {
       
-        mesh.collapse(e);
-      }
-      std::cout << "collapse phase1" << std::endl;
+     
       //fliping phase
       e++;
     }
 
-    
+    e = mesh.edgesBegin();
+    std::cout << "remshing in progress colapse" << std::endl;
+    for (int i = 0; i != old_edge_num; i++) {
+      //spliting phase
+      std::cout << "collaping phase" << std::endl;
+      if (e->halfedge()->edge()->length() < L_min) {
+        std::cout << "colase phase entered" << std::endl;
+        mesh.collapse(e);
+      }
+      
+     
+      //fliping phase
+      e++;
+    }
+   
+       //collapse phase
+      
+      
 
 
 
