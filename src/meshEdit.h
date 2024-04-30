@@ -360,6 +360,10 @@ class MeshEdit : public Renderer {
   // Sets up and calls the MeshResampler with the appropiate operation.
   void mesh_up_sample();
 
+  //Final project function
+  void mesh_butterfly();
+
+
   // If a halfedge is selected, advances to the next or twin halfedge.
   void selectNextHalfedge( void );
   void selectTwinHalfedge( void );

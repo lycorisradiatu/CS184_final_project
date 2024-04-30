@@ -235,9 +235,8 @@ namespace CGL {
 
       case 'l':
       case 'L':
-        mesh_up_sample();
+          mesh_up_sample();
         break;
-
       case 'i':
       case 'I':
         showHUD = !showHUD;
@@ -266,6 +265,10 @@ namespace CGL {
       case 'Q':
         smoothShading = !smoothShading;
         break;
+      case 'b':
+      case 'B':
+          mesh_butterfly();
+          break;
       default:
         break;
     }
@@ -976,6 +979,33 @@ namespace CGL {
     selectedFeature.invalidate();
     hoveredFeature.invalidate();
   }
+
+  void MeshEdit::mesh_butterfly()
+  {
+      HalfedgeMesh* mesh;
+
+      // If an element is selected, resample the mesh containing that
+      // element; otherwise, resample the first mesh in the scene.
+      if (selectedFeature.isValid())
+      {
+          mesh = &(selectedFeature.node->mesh);
+      }
+      else
+      {
+          mesh = &(meshNodes.begin()->mesh);
+      }
+
+      resampler.upsample_butterfly_scheme(*mesh);
+
+      // Since the mesh may have changed, the selected and
+      // hovered features may no longer point to valid elements.
+      selectedFeature.invalidate();
+      hoveredFeature.invalidate();
+  }
+
+
+
+
 
   inline void MeshEdit::drawString(float x, float y, string str, size_t size, Color c)
   {

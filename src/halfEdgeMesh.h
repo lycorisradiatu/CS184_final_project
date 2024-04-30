@@ -368,6 +368,10 @@ namespace CGL
           */
          HalfedgeCIter halfedge( void ) const { return _halfedge; }
 
+         int gen_index = 0;      ///< generation index
+         Vector3D newPosition;   ///< sqrt3 subdivision, this will be position of the new vertex in the face
+         bool is_new = true;
+
          /**
           * returns the number of edges (or equivalently, vertices) of this face
           */
@@ -407,6 +411,8 @@ namespace CGL
       protected:
          HalfedgeIter _halfedge; ///< one of the halfedges of this face
          bool _isBoundary;       ///< boundary flag
+         
+         
    };
 
    /**
@@ -629,7 +635,7 @@ namespace CGL
           */
            EdgeIter       flipEdge( EdgeIter e ); ///< flip an edge, returning a pointer to the flipped edge
          VertexIter      splitEdge( EdgeIter e ); ///< split an edge, returning a pointer to the inserted midpoint vertex; the halfedge of this vertex should refer to one of the edges in the original mesh
-
+         VertexIter      splitFace(FaceIter face); ///< split an face, returning the added vertex
 
          void check_for(HalfedgeIter h) {
           for (HalfedgeIter he = halfedgesBegin(); he != halfedgesEnd(); he++) {
