@@ -137,6 +137,8 @@ namespace CGL
 
       FaceIter f1 = h->face();
       FaceIter f2 = h->twin()->face();
+      f1->gen_index++;
+      f2->gen_index++;
 
       HalfedgeIter ac = h->next();
       HalfedgeIter ab = h->next()->next();
@@ -406,7 +408,7 @@ namespace CGL
       }
   }
 
-  void MeshResampler::upsample_sqrt3(HalfedgeMesh& mesh)
+  void MeshResampler::upsample_butterfly_scheme(HalfedgeMesh& mesh)
   {
       // Step A: Compute the positions of both new and old vertices using the original mesh.
 
@@ -422,7 +424,7 @@ namespace CGL
           // 1. Boundary edges
           if (e->isBoundary()) {
               new_position = (v1->position + v2->position) / 2;
-              std::cout << "debug11111111111111: v1 position: " << std::endl;
+              //std::cout << "debug11111111111111: v1 position: " << std::endl;
           }
 
           // 2. The edge connects two vertices of valence 6
@@ -588,7 +590,7 @@ namespace CGL
       }
   }
 
-    void MeshResampler::upsample_sqrt3_refinement( HalfedgeMesh& mesh ) {
+    void MeshResampler::upsample_sqrt3( HalfedgeMesh& mesh ) {
         for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
             v->split = false;
         }
@@ -709,6 +711,7 @@ VertexIter HalfedgeMesh::splitFace_adaptive(FaceIter face)
                 current_face->gen_index = current_index + 1;
                 currentHalfedge = currentHalfedge->next()->next()->twin();
                 if (nextHalfedge->twin()->face()->gen_index == current_face->gen_index) {
+
                     flipEdge(nextHalfedge->edge());
                 }
             } while (currentHalfedge != m->halfedge());
@@ -722,7 +725,7 @@ VertexIter HalfedgeMesh::splitFace_adaptive(FaceIter face)
     }
 }
 
-void MeshResampler::upsample_butterfly_scheme(HalfedgeMesh& mesh) {
+void MeshResampler::upsample_sqrt3_refinement(HalfedgeMesh& mesh) {
     for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
         v->split = true;
     }

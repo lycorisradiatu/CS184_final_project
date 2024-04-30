@@ -277,7 +277,7 @@ namespace CGL {
         break;
       case 'z':
       case 'Z':
-        call_upsamp_sq3_r();
+        call_upsamp_sq3();
         break;
       default:
         break;
