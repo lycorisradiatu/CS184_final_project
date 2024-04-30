@@ -369,6 +369,9 @@ namespace CGL
           FaceIter f2 = newFace();
           FaceIter f3 = newFace();
 
+          // adaptive refinement
+          //f1->gen_index = f2->gen_index = f3->gen_index= f1->gen_index + 1;
+
           // verteces
           m->halfedge() = h4;
           m->isNew = true;
@@ -689,6 +692,36 @@ namespace CGL
   }
 }
 
+VertexIter HalfedgeMesh::splitFace_adaptive(FaceIter face)
+{
+    int current_index = face->gen_index;
+
+    if (face->isBoundary()) {
+        return VertexIter();
+    }
+    else {
+        if (face->gen_index % 2 == 0) {
+            VertexIter m = splitFace(face);
+            HalfedgeIter currentHalfedge = m->halfedge();
+            do {
+                HalfedgeIter nextHalfedge = currentHalfedge->next();
+                FaceIter current_face = nextHalfedge->face();
+                current_face->gen_index = current_index + 1;
+                currentHalfedge = currentHalfedge->next()->next()->twin();
+                if (nextHalfedge->twin()->face()->gen_index == current_face->gen_index) {
+                    flipEdge(nextHalfedge->edge());
+                }
+            } while (currentHalfedge != m->halfedge());
+        }
+        else {
+            if (face->halfedge()->twin()->face()->gen_index == face->gen_index - 2) {
+                splitFace_adaptive(face->halfedge()->twin()->face());
+            }
+            splitFace_adaptive(face->halfedge()->twin()->face());
+        }
+    }
+}
+
 void MeshResampler::upsample_butterfly_scheme(HalfedgeMesh& mesh) {
     for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
         v->split = true;
@@ -763,7 +796,7 @@ void MeshResampler::upsample_butterfly_scheme(HalfedgeMesh& mesh) {
     int total = 0;
     for (FaceIter f = mesh.facesBegin(); f != mesh.facesEnd(); f++) {
         if (!f->is_new && f->split) {
-            mesh.splitFace(f);
+            mesh.splitFace_adaptive(f);
             total++;
         }
     }
