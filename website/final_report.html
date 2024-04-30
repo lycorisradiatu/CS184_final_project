@@ -32,7 +32,7 @@
 </h2>
 <p>
     In this project, we explored different subdivision schemes and remeshing. 
-    We implemented the modified butterfly subdivision scheme and the sqrt 3 subdivision. 
+    We implemented the modified butterfly subdivision scheme and the sqrt3-Subdivision. 
     We also implemented collapse and shifting procedure of remeshing.
 </p>
 
@@ -70,6 +70,23 @@
     <source src="images/bandicam 2024-04-16 18-46-21-521.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
+
+<h3>
+    Sqrt3-Subdivision Scheme
+</h3>
+<p>
+    The sqrt3-subdivision operator inserts a new vertex for every triangle of the given mesh, 
+    using the following equation: q := 1/3 * (pi + pj + pk) where the new vertex q is simply inserted at the center of the triangle 
+    with vertices pi, pj, and pk.
+</p>
+<p>
+    And then we create new edges between q and pi, q and pj, and q and pk. We flip every original edge which connects two old vertices
+</p>
+<p>
+    At the end we update the position of the old vertices using the following relaxation equation: 
+</p>
+<img src="images/sqrt3_1.png" align="middle" width="400px"/>
+<img src="images/sqrt3_2.png" align="middle" width="400px"/>
 
 <h3>
     Remeshing
