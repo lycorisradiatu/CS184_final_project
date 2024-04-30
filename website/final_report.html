@@ -11,6 +11,11 @@
         font-family: 'Open Sans', sans-serif;
         color: #121212;
     }
+    .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     h1, h2, h3, h4 {
         font-family: 'Source Sans Pro', sans-serif;
     }
@@ -111,10 +116,12 @@
 <h4>
     Video
 </h4>
-<video width="640" height="360" controls>
-    <source src="images/bandicam 2024-04-16 18-46-21-521.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<div class="video-container">
+    <video width="640" height="360" controls>
+        <source src="images/bandicam 2024-04-16 18-46-21-521.mp4" type="video/mp4">
+    </video>
+</div>
+
 <h4>
     Sqrt3-Subdivision Scheme
 </h4>
@@ -172,10 +179,11 @@
 <h4>
     Video
 </h4>
-<video width="640" height="360" controls>
-    <source src="images/remeshing_progress.mp4" type="video/mp4">
-</video>
-    
+<div class="video-container">
+    <video width="640" height="360" controls>
+        <source src="images/remeshing_progress.mp4" type="video/mp4">
+    </video>
+</div>    
   
 <h2>
     References
