@@ -337,8 +337,6 @@ namespace CGL
     }
   }
 
-  
-
 
   VertexIter HalfedgeMesh::splitFace(FaceIter face)
   {
@@ -367,7 +365,6 @@ namespace CGL
           EdgeIter e3 = newEdge();
 
           FaceIter f1 = face;
-          face->is_new = true;
           FaceIter f2 = newFace();
           FaceIter f3 = newFace();
 
@@ -388,6 +385,7 @@ namespace CGL
           f1->halfedge() = h1;
           f2->halfedge() = h2;
           f3->halfedge() = h3;
+          f1->is_new = f2->is_new = f3->is_new = true;
 
           // halfedges
           h1->setNeighbors(h5, h1->twin(), a, h1->edge(), f1);
@@ -405,6 +403,9 @@ namespace CGL
   }
 
     void MeshResampler::upsample_butterfly_scheme( HalfedgeMesh& mesh ) {
+        for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
+            e->isNew = false;
+        }
     // (1) compute the position of a newly added vertex
       for (FaceIter f = mesh.facesBegin(); f != mesh.facesEnd(); f++) {
           HalfedgeIter h = f->halfedge();
@@ -433,14 +434,16 @@ namespace CGL
       // Step B: Subdivide the original mesh.
 
       // (1) Create new vertex and edges for every face
+      int total = 0;
       for (FaceIter f = mesh.facesBegin(); f != mesh.facesEnd(); f++) {
           if (!f->is_new) {
               mesh.splitFace(f);
+              total++;
           }
       }
+      std::cout << "Total # of splited faces: " << total << std::endl;
 
       // (2) Flip every original edge that connects two old vertices
-     //4. Flip any new edge that connects an old and new vertex.
       for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
           if ((!e->isNew)) {
               VertexIter v1 = e->halfedge()->vertex();
