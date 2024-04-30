@@ -20,6 +20,7 @@ namespace CGL {
     double get_s_j(int j, int K);
     void upsample_butterfly_scheme(HalfedgeMesh& mesh);
     void upsample_sqrt3(HalfedgeMesh& mesh);
+    void MeshResampler::upsample_sqrt3_refinement(HalfedgeMesh& mesh);
   };
 }
 

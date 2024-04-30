@@ -370,7 +370,8 @@ namespace CGL
 
          int gen_index = 0;      ///< generation index
          Vector3D newPosition;   ///< sqrt3 subdivision, this will be position of the new vertex in the face
-         bool is_new = true;
+         bool is_new = true;     ///< if the face is a new face
+         bool split = true;      ///< if the face will be split, used for adaptive refinement
 
          /**
           * returns the number of edges (or equivalently, vertices) of this face
@@ -436,6 +437,7 @@ namespace CGL
 
          Vector3D newPosition; ///< For Loop subdivision, this will be the updated position of the vertex
          bool isNew; ///< For Loop subdivision, this flag should be true if and only if this vertex is a new vertex created by subdivision (i.e., if it corresponds to a vertex of the original mesh)
+         bool split = false;
 
          /**
           * computes the average of the neighboring vertex positions and stores it in Vertex::centroid
@@ -529,7 +531,7 @@ namespace CGL
 
          Vector3D newPosition; ///< For Loop subdivision, this will be the position for the edge midpoint
          bool isNew; ///< For Loop subdivision, this flag should be true if and only if this edge is a new edge created by subdivision (i.e., if it cuts across a triangle in the original mesh)
-
+         bool split = false;
          EdgeRecord record;
 
       protected:
