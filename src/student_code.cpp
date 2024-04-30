@@ -7,7 +7,7 @@
 #include "mutablePriorityQueue.h"
 
 using namespace std;
-
+std::set<EdgeIter> deletedEdges;
 namespace CGL
 {
 
@@ -313,9 +313,11 @@ namespace CGL
 
 
    VertexIter HalfedgeMesh::collapse (EdgeIter e0) {
-    
-    
-    HalfedgeIter h0 = e0->halfedge();
+      if (e0->isBoundary()) {
+          return VertexIter();
+      }
+
+      HalfedgeIter h0 = e0->halfedge();
       HalfedgeIter h1 = h0->twin();
 
       VertexIter v0 = h0->vertex();
@@ -323,12 +325,8 @@ namespace CGL
 
       Vector3D newPosition = (v0->position + v1->position) / 2.0;
 
-      HalfedgeIter h = v0->halfedge();
-      do {
-          h->vertex() = v1;
-          h = h->twin()->next();
-      } while (h != v0->halfedge());
-    
+      
+
       HalfedgeIter h2 = h0->next();
       HalfedgeIter h3 = h2->next();
       HalfedgeIter h4 = h3->twin()->next();
@@ -337,38 +335,57 @@ namespace CGL
       HalfedgeIter h7 = h6->next();
       HalfedgeIter h8 = h6->twin()->next();
       HalfedgeIter h9 = h8->next();
-  
+
+      HalfedgeIter h = v0->halfedge();
+      do {
+          h->vertex() = v1;
+          h = h->next()->next()->twin();
+          std::cout << &h->edge() << std::endl;
+          if (&h == &h->twin()->next()) { break; }
+      } while (h != v0->halfedge());
+
       h3->vertex()->halfedge() = h4;
       h7->vertex()->halfedge() = h7;
 
       h4->face()->halfedge() = h4;
       h8->face()->halfedge() = h8;
+
+      v1->halfedge() = h2;
+      v1->position = newPosition;
+
+      
+      
+      if(deletedEdges.find(h3->edge()) == deletedEdges.end()){ 
+          deleteEdge(h3->edge());
+          deleteFace(h3->face());
+          deleteHalfedge(h3->twin());
+          deleteHalfedge(h3);
+          deletedEdges.insert(h3->edge());
+      }
+
+      if(deletedEdges.find(h6->edge()) == deletedEdges.end()){ 
+          deleteEdge(h6->edge()); 
+          deleteFace(h6->face());
+          deleteHalfedge(h6->twin());
+          deleteHalfedge(h6);
+          deletedEdges.insert(h6->edge());
+      }
+      
+      deleteEdge(e0);
+      
+      deleteHalfedge(h0);
+      deleteHalfedge(h1);
+      deleteVertex(v0);
+      deletedEdges.insert(e0);
+
+
       h2->setNeighbors(h4, h2->twin(), v1, h2->edge(), h4->face());
-      h4->setNeighbors(h5, h4->twin(), h3->vertex(), h4->edge(), h4->face());
+      h4->setNeighbors(h5, h4->twin(), h4->vertex(), h4->edge(), h4->face());
       h5->setNeighbors(h2, h5->twin(), h5->vertex(), h5->edge(), h4->face());
       h7->setNeighbors(h8, h7->twin(), h7->vertex(), h7->edge(), h8->face());
       h8->setNeighbors(h9, h8->twin(), v1, h8->edge(), h8->face());
       h9->setNeighbors(h7, h9->twin(), h9->vertex(), h9->edge(), h8->face());
 
-      v1->halfedge() = h2;
-      v1->position = newPosition;
-      
-      
-      
-      deleteFace(h0->face());
-      deleteFace(h1->face());
-
-      //Total deleting edge 3
-      deleteEdge(e0);
-      deleteEdge(h3->edge());
-      deleteEdge(h6->edge());
-      deleteHalfedge(h3->twin());
-      deleteHalfedge(h3);
-      deleteHalfedge(h6->twin());
-      deleteHalfedge(h6);
-      deleteHalfedge(h0);
-      deleteHalfedge(h1);
-      deleteVertex(v0);
       return v1;
   }
 
@@ -407,109 +424,56 @@ namespace CGL
 
   //utilizing the loop-traversing used in hw
   void MeshResampler::remesh ( HalfedgeMesh& mesh) {
-    //define Lmax for split edge and Lmin for collapse
-    
-    double L_max;
-    double L_min ;
-    double avgLength = 0;
-    for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
-        /*std::cout << e->length() << std::endl;*/
-        avgLength += e->length() / mesh.nEdges();
-    }
-    std::cout << avgLength << std::endl;
-    L_max = avgLength * 4 / 3;
-    L_min = avgLength * 4 / 5;
-
-    int old_edge_num = mesh.nEdges();
-    EdgeIter e = mesh.edgesBegin();
-    std::cout << "remshing in progress split" << std::endl;
-    for (int i = 0; i != old_edge_num; i++) {
-      //spliting phase
-
-      if (e->halfedge()->edge()->length() > L_max) {
-        std::cout << "spliting phase entered" << std::endl;
-        mesh.splitEdge(e);
-      }
-      
-     
-      //fliping phase
-      e++;
-    }
-
-    e = mesh.edgesBegin();
-    std::cout << "remshing in progress colapse" << std::endl;
-    for (int i = 0; i != old_edge_num; i++) {
-      //spliting phase
-      std::cout << "collaping phase" << std::endl;
-      if (e->halfedge()->edge()->length() < L_min) {
-        std::cout << "colase phase entered" << std::endl;
-        mesh.collapse(e);
-      }
-      
-     
-      //fliping phase
-      e++;
-    }
-   
-       //collapse phase
-      
-      
-
-
-
-    std::cout << "Collapse and spliting phase done" << std::endl;
-    
-    std::cout << "fliping phase" << std::endl;
-    double avgDegree = 100;
-    double stdDegree = 100; 
-    while (stdDegree > 0.1) {
+      double L_max;
+      double L_min;
+      double avgLength = 0;
       for (EdgeIter e = mesh.edgesBegin(); e != mesh.edgesEnd(); e++) {
-        if (e->halfedge()->vertex()->degree() > 6) {
-          mesh.flipEdge(e);
-        }
+          /*std::cout << e->length() << std::endl;*/
+          avgLength += e->length() / mesh.nEdges();
+      }
+      std::cout << avgLength << std::endl;
+      L_max = avgLength * 4 / 3;
+      L_min = avgLength * 3 / 5;
+
+      std::vector<EdgeIter> edges;
+      for (auto it = mesh.edgesBegin(); it != mesh.edgesEnd(); ++it) {
+          edges.push_back(it);
       }
 
+      for (auto it : edges) {
+          if (deletedEdges.find(it) == deletedEdges.end() && it->length() < L_min) {
+              std::cout << "collapse phase entered" << std::endl;
+              mesh.collapse(it);
+              std::cout << "collapse done" << std::endl;
+          }
+      }
 
+      int old_edge_num = mesh.nEdges();
+      EdgeIter e = mesh.edgesBegin();
+      for (int i = 0; i != old_edge_num; i++) {
 
-      avgDegree = 0;
-      stdDegree = 0;
+          if (e->halfedge()->edge()->length() > L_max) {
+              std::cout << "spliting phase entered" << std::endl;
+              mesh.splitEdge(e);
+          }
+
+          e++;
+      }
+
+      std::cout << "Collapse and spliting phase done" << std::endl;
+
+      for (EdgeIter it = mesh.edgesBegin(); it != mesh.edgesEnd(); ++it) {
+          if (it->halfedge()->vertex()->degree() > 6) {
+              std::cout << "flip phase" << std::endl;
+              mesh.flipEdge(it);
+          }
+      }
       for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
-        avgDegree += v->degree()/mesh.nVertices();
+          mesh.shift(v);
+          std::cout << "shift phase" << std::endl;
       }
-      for (VertexIter v = mesh.verticesBegin(); v != mesh.verticesEnd(); v++) {
-        stdDegree += (v->degree() - avgDegree) * (v->degree() - avgDegree)/mesh.nVertices();
-      }
-    }
-
-
-
-    VertexIter v = mesh.verticesBegin(); 
-    do {
-      mesh.shift(v);
-      v++;
-    } while (v != mesh.verticesBegin());
-
-    std::cout << "remshing done" << std::endl;
-
-
-    
-
-    //Spliting phase
-
-    //Collapsing phase
-
-    //Flipping pase
-
-
-
-    //shifting and projecting phase
-
-
-
-
 
   }
-
   void MeshResampler::subdivision(HalfedgeMesh& mesh ) {
 
   }
