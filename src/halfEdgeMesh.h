@@ -486,7 +486,7 @@ namespace CGL
                // move to the next halfedge around the vertex
                h = h->twin()->next();
             }
-            while( h != _halfedge ); // done iterating over halfedges
+            while( h != _halfedge && d < 12); // done iterating over halfedges
 
             return d;
          }
