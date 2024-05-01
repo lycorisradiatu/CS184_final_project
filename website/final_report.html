@@ -38,7 +38,8 @@
 <p>
     In this project, we explored different subdivision schemes and remeshing. 
     We implemented the modified butterfly subdivision scheme and the sqrt3-Subdivision. 
-    We also implemented collapse and shifting procedure of remeshing.
+    We also implemented isotropic remeshing algorithm based on our newly-implemented local mesh 
+    operations vertex shift and edge collapse.
 </p>
 
 <h2>
@@ -131,17 +132,24 @@
 </h3>
 <p>
     Continuing from where we left off on homework 2, we implement extra local operations like edge collapsing and vertex shifting. And then we combine all these 
-    operations to implement our incremental remeshing method. <br>
+    operations to implement our incremental remeshing method. <br><br>
+
     To be more specific, For the <b>collapseEdge</b> function, it takes an edge as input and outputs a vertex. Our goal is to collapse the input edge to get a new mesh. 
     Suppose the two vertices of this edge are v0 and v1, and we want to remove v0. Firstly, we traverse all the halfedges that have v0 as their vertex and modify 
     their vertices to v1. Secondly, we reassign certain halfedges corresponding to some vertices and faces to prevent them from pointing to the halfedges that will 
     be deleted. Then we reorganize the relationships between the halfedges so that they connect to form new triangles. Finally, we delete the surplus edges, faces, 
-    vertex and halfedges. <br>
+    vertex and halfedges. <br><br>
+
     And for <b>vertex shifting</b>, we sum up the positions of all vertices adjacent to the selected vertex and take the average to calculate the average 
     position of the surrounding vertices. Then, we constrain the position of the vertex on surface through projection, rather than directly assigning the average 
-    position to this vertex. <br>
-    Finally, we loop through Spliting, Collapsing, Flipping, vertex shifting, and projection to get our remeshed result. Unfortunately, there might still be some bugs
-    in our remeshing function so the mesh looks kind of strange after remeshing. We will try to fix it later.<br>
+    position to this vertex. <br><br>
+    
+    Finally, we loop through Spliting, Collapsing, Flipping, vertex shifting, and projection to get our remeshed result.<br><br>
+
+    <b>Problems encountered:</b> Since <b>Collapse</b> deletes many mesh elements, which easily led to pointer errors and caused the program to crash, 
+    we spent so much time on it. We asked TA Tianyun for some debugging tips and discussed together and finally figured out that since we 
+    are deleting edges while we iterate through all the edges in the mesh, some edges may have been deleted before we get its edgeiter. So 
+    we add a set which contains all the edges that have been deleted during collapsing and avoid operating them in later process. <br><br>
 </p>
   
 <h2>
@@ -368,6 +376,8 @@
 <p>
     • https://mrl.cs.nyu.edu/~dzorin/papers/zorin1996ism.pdf<br>
     • https://www.graphics.rwth-aachen.de/media/papers/sqrt31.pdf<br>
+    • https://www.hao-li.com/cs599-ss2015/slides/Lecture09.1.pdf<br>
+    • https://www.graphics.rwth-aachen.de/media/papers/remeshing1.pdf<br>
 </p>
 
 <h2>
@@ -377,7 +387,7 @@
     • Angel Tu: Modified Butterfly Subdivision Scheme, websites, and slides. <br>
     • Jiacheng Song: <br>
     • Youxun Liu: <br>
-    • Zhen Fu: <br>
+    • Zhen Fu: edge collapse, vertex shift, remeshing, websites, and slides.<br>
 </p>
 
 </div>
